@@ -21,7 +21,7 @@ function style(){
 function watch(){
 
     browserSync.init({
-        proxy: 'http://localhost:8888/wordpress/rlestate/',
+        proxy: 'http://shopify.local/',
 
       })
 

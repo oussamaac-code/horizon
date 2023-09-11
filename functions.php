@@ -1,5 +1,4 @@
 
-
 <?php 
 
 
@@ -40,7 +39,6 @@ add_action( 'wp_enqueue_scripts', 'load_scripts' );
 
 
 echo the_title();
-
 
 
 //======================================================

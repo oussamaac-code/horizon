@@ -15,7 +15,36 @@
 <header>
 
     <div class="container">
+
         
+        <div class="logo"> <!-- logo -->
+
+            <a href="<?php echo get_home_url() ;?>">
+            
+                <img src="<?php ;?>" alt="logo">
+            </a>
+
+        </div>
+
+
+        
+        <nav> <!-- nav links -->
+
+            <?php  wp_nav_menu( [
+                
+                'theme_location' => 'header' ,
+                'container' => false
+
+            ]) ;?>
+
+        </nav>
+
+        
+        
+        <div class="end"> <!-- header end -->
+
+        </div>
+
     </div>
 
 </header>

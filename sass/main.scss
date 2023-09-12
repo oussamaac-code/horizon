@@ -1,4 +1,9 @@
 
+
+// ** Variables
+
+@import "./variables/variables";
+
 body{
 
     padding: 0%;
@@ -19,3 +24,9 @@ img{
     max-width: 100%;
     height: auto;
 }
+
+// ** Components
+
+@import "./components/header";
+@import "./components/footer";
+

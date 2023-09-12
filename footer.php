@@ -14,7 +14,7 @@
 
         </div>
 
-        
+
 
         <?php  wp_nav_menu( [
                 
@@ -22,6 +22,11 @@
             'container' => false
 
         ]) ;?>
+
+
+        <div class="copyright"> <!-- copyright -->
+             © 2023 Wildzoo. All Rights Reserved.
+        </div>
 
     </div>
 

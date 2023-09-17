@@ -16,8 +16,8 @@
 
     <div class="container">
 
-        
-        <div class="logo"> <!-- logo -->
+        <!-- logo -->
+        <div class="logo"> 
 
             <a href="<?php echo get_home_url() ;?>">
 
@@ -27,8 +27,8 @@
         </div>
 
 
-        
-        <nav> <!-- nav links -->
+        <!-- nav links -->
+        <nav> 
 
             <?php  wp_nav_menu( [
                 
@@ -40,8 +40,21 @@
         </nav>
 
         
-        
-        <div class="end"> <!-- header end -->
+        <!-- header end -->
+        <div class="end"> 
+
+        </div>
+
+
+        <!-- mobile menu -->
+        <div class="mobile-menu">
+
+             <?php  wp_nav_menu( [
+                
+                'theme_location' => 'header' ,
+                'container' => false
+
+            ]) ;?>
 
         </div>
 

@@ -91,11 +91,20 @@ function register_my_sidebars() {
     register_sidebar(
        array(
 
-         'name'          => __( 'shop', 'RL Estate' ),
+         'name'          => __( 'shop', 'Horizon' ),
 		 'id'            => 'shop',
         
         )
     );
+
+    register_sidebar(
+        array(
+ 
+          'name'          => 'blog-sidebar',
+          'id'            => 'blog-sidebar',
+         
+         )
+     );
 
     
 

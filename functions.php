@@ -11,10 +11,12 @@ function load_scripts(){
     //enqueue style   
     wp_enqueue_style( 'remixicon', get_template_directory_uri() . '/asset/fonts/remixicon.css',false,'1.1','all');
     wp_enqueue_style( 'owl', get_template_directory_uri() . '/asset/css/owl.carousel.min.css',false,'0.1','all');
+    wp_enqueue_style( 'accordioncss', get_template_directory_uri() . '/asset/css/accordion.min.css',false,'0.1','all');
     wp_enqueue_style( 'style', get_template_directory_uri() . '/asset/css/custom.css',false,'0.2','all');
     
     //enqueue script
     wp_enqueue_script( 'jquy', get_template_directory_uri() . '/asset/js/jquery-3.6.0.min.js', false, 1.1, true);
+    wp_enqueue_script( 'accordionjs', get_template_directory_uri() . '/asset/js/accordion.min.js', false, 1.1, true);
     wp_enqueue_script( 'counterjs', get_template_directory_uri() . '/asset/js/counter.min.js', false, '0.0', true);
     wp_enqueue_script( 'easing', get_template_directory_uri() . '/asset/js/jquery.easing.js', false, '0.0', true);
     wp_enqueue_script( 'carousel', get_template_directory_uri() . '/asset/js/owl.carousel.min.js', false, '0.0', true);
@@ -89,7 +91,7 @@ function register_my_sidebars() {
     register_sidebar(
        array(
 
-         'name'          => __( 'shop', 'Horizon' ),
+         'name'          => __( 'shop', 'text_domain' ),
 		 'id'            => 'shop',
         
         )
@@ -98,11 +100,11 @@ function register_my_sidebars() {
     register_sidebar(
         array(
  
-          'name'          => 'blog-sidebar',
+          'name'          =>__( 'blog-sidebar', 'text_domain' ),
           'id'            => 'blog-sidebar',
          
          )
-     );
+    );
 
     
 

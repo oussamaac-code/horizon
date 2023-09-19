@@ -10,7 +10,9 @@
                     <div class="thumbnail">
                         <?php echo get_the_post_thumbnail() ;?>
                     </div>
-                    <div class="meta"></div>
+                    <div class="post-details">
+                        <time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished"><?php echo get_the_date(); ?></time>
+                    </div>
                     <article>
                         <?php the_content();?>
                     </article>

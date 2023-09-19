@@ -38,8 +38,6 @@ function load_scripts(){
 add_action( 'wp_enqueue_scripts', 'load_scripts' );
 
 
-echo the_title();
-
 
 //======================================================
 //                    navigation menus
@@ -113,3 +111,9 @@ function register_my_sidebars() {
 add_action( 'widgets_init', 'register_my_sidebars' );
 
 
+//======================================================
+//                  Include files
+//======================================================
+
+
+echo get_template_part('inc/filters');

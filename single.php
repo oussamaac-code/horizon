@@ -11,11 +11,12 @@
                         <?php echo get_the_post_thumbnail() ;?>
                     </div>
                     <div class="post-details">
-                        <time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished"><?php echo get_the_date(); ?></time>
+                        <time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished"><?php echo get_the_date('j M Y'); ?></time>
                     </div>
                     <article>
                         <?php the_content();?>
                     </article>
+                    <?php comments_template() ;?>
                 </div>
                 
                 <div class="sidebar">

@@ -83,7 +83,7 @@ function wildzoo_site_facebook(){
     echo '<div>';
     echo '<input type="text" name="facebook_account" value="'.$facebook.'" placeholder="Facebook url" /> ';
 
-    if(empty($facebook)){ return;}
+    if(empty($instagram)){  echo '</div>' ; return ;}
     echo '<a target="_blank" href="'.$facebook.'" style="margin-left: 10px;"> Visit <i class="ri-external-link-line"></i> </a>';
     echo '</div>';
 }
@@ -92,7 +92,7 @@ function wildzoo_site_instagram(){
     $instagram= esc_attr(get_option('instagram_account')) ;
     echo '<div>';
     echo '<input type="text" name="instagram_account" value="'.$instagram.'" placeholder="Instagram url" /> ';
-    if(empty($instagram)){ return;}
+    if(empty($instagram)){  echo '</div>' ; return ;}
     echo '<a target="_blank" href="'.$instagram.'" style="margin-left: 10px;"> Visit <i class="ri-external-link-line"></i></a>';
     echo '</div>';
 }

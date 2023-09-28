@@ -4,7 +4,7 @@
 
     <div class="container">
 
-    
+
         <!-- logo -->
         <div class="logo"> 
 
@@ -26,7 +26,7 @@
 
 
         <!-- copyright -->
-        <div class="copyright"> © 2023 Wildzoo. All Rights Reserved. </div>
+        <div class="copyright"> © 2023 <?php echo get_option('site_name') ;?>. All Rights Reserved. </div>
 
     </div>
 

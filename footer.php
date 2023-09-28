@@ -9,8 +9,7 @@
         <div class="logo"> 
 
             <a href="<?php echo get_home_url() ;?>">
-
-                <img src="<?php ;?>" alt="logo">
+                <img src="<?php echo get_option('site_logo') ;?>" alt="logo">
             </a>
 
         </div>

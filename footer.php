@@ -26,7 +26,7 @@
 
 
         <!-- copyright -->
-        <div class="copyright"> © 2023 <?php echo get_option('site_name') ;?>. All Rights Reserved. </div>
+        <div class="copyright"> © 2023 <a href="<?php echo get_home_url() ;?>"><?php echo get_option('site_name') ;?></a> . All Rights Reserved. </div>
 
     </div>
 

@@ -39,6 +39,12 @@ function load_scripts(){
 
 add_action( 'wp_enqueue_scripts', 'load_scripts' );
 
+//======================================================
+//                admin enqueue scripts
+//======================================================
+
+get_template_part('core/admin/templates/enqueue');
+
 
 
 //======================================================
@@ -91,7 +97,7 @@ function register_my_sidebars() {
     register_sidebar(
        array(
 
-         'name'          => __( 'shop', 'text_domain' ),
+         'name'          => __( 'shop', 'textdomain' ),
 		 'id'            => 'shop',
         
         )
@@ -100,7 +106,7 @@ function register_my_sidebars() {
     register_sidebar(
         array(
  
-          'name'          =>__( 'blog-sidebar', 'text_domain' ),
+          'name'          =>__( 'blog-sidebar', 'textdomain' ),
           'id'            => 'blog-sidebar',
          
          )
@@ -118,4 +124,6 @@ add_action( 'widgets_init', 'register_my_sidebars' );
 //======================================================
 
 
-echo get_template_part('inc/filters');
+get_template_part('inc/wp', 'filters');
+get_template_part('core/admin/function','admin');
+get_template_part('/core/elementor/elementor', 'widgets');

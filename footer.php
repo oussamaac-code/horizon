@@ -4,8 +4,9 @@
 
     <div class="container">
 
-
-        <div class="logo"> <!-- logo -->
+    
+        <!-- logo -->
+        <div class="logo"> 
 
             <a href="<?php echo get_home_url() ;?>">
 
@@ -24,9 +25,8 @@
         ]) ;?>
 
 
-        <div class="copyright"> <!-- copyright -->
-             © 2023 Wildzoo. All Rights Reserved.
-        </div>
+        <!-- copyright -->
+        <div class="copyright"> © 2023 Wildzoo. All Rights Reserved. </div>
 
     </div>
 

@@ -16,7 +16,7 @@ get_header(); ?>
             $query = new WP_Query([
 
                 'post_type'      => 'post',
-                'posta_status'   => 'publish',
+                'post_status'   => 'publish',
                 
             ]);
 

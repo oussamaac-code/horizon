@@ -30,6 +30,10 @@ img{
     height: auto;
 }
 
+#trp-floater-ls.trp-bottom-right{
+    display: none !important;
+}
+
 // ** Components
 
 @import "./components/components";

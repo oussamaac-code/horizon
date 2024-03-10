@@ -14,7 +14,7 @@ function load_scripts(){
     wp_enqueue_style( 'remixicon', get_template_directory_uri() . '/asset/fonts/remixicon.css',false,'1.1','all');
     wp_enqueue_style( 'owl', get_template_directory_uri() . '/asset/css/owl.carousel.min.css',false,'0.1','all');
     wp_enqueue_style( 'accordioncss', get_template_directory_uri() . '/asset/css/accordion.min.css',false,'0.1','all');
-    wp_enqueue_style( 'style', get_template_directory_uri() . '/asset/css/custom.css',false,'0.2','all');
+    wp_enqueue_style( 'style', get_template_directory_uri() . '/asset/css/custom.css',false,'0.0','all');
     
     //enqueue script **
     wp_enqueue_script( 'jquery');
@@ -63,9 +63,7 @@ function register_my_menus() {
 
             'header' => __( 'Header Menu', 'text_domain' ),
             
-            'footer'  => __( 'Footer Menu', 'text_domain' ),
-
-            'terms'  => __( 'Terms Menu', 'text_domain' ),
+            'footer'  => __( 'Footer Menu', 'text_domain' )
         
         )
     );
@@ -94,7 +92,6 @@ add_theme_support( 'responsive-embeds' );
 add_image_size('blog-mini', 150, 150, true);
 
 
-
 //======================================================
 //                    sidebars
 //======================================================
@@ -119,12 +116,9 @@ function register_my_sidebars() {
          )
     );
 
-    
-
 }
 
 add_action( 'widgets_init', 'register_my_sidebars' );
-
 
 
 //======================================================

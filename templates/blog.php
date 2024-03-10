@@ -1,12 +1,13 @@
-
-
 <?php
-
 /**
-* Template Name: Blog
-*/
+ * 
+ * @package Horizon
+ * 
+ * Template Name: Blog
+ */
 
-get_header(); ?>
+get_header();
+?>
 
 
     <main>
@@ -34,4 +35,4 @@ get_header(); ?>
 
 
 
-<?php get_footer() ;?>
+<?php get_footer();

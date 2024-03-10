@@ -1,10 +1,10 @@
-
-
 <?php
-
 /**
-* Template Name: About
-*/
+ * 
+ * @package Horizon
+ * 
+ * Template Name: About
+ */
 
 get_header(); ?>
 

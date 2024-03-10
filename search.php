@@ -1,6 +1,13 @@
-
-
-<?php get_header() ;?>
+<?php 
+/**
+ * The template for displaying search results pages
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
+ *
+ * @package Horizon
+ */
+get_header();
+?>
 
     <main>
 
@@ -25,4 +32,5 @@
         <br>
     </main>
 
-<?php  get_footer() ;?>
+<?php  
+get_footer();

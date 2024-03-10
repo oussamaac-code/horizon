@@ -1,7 +1,18 @@
-
 <?php
+/**
+ * This file contains all the filters of your theme
+ *
+ *
+ * @link https://developer.wordpress.org/themes/functionality/custom-headers/
+ *
+ * @package bgfollowerz
+ */
 
-//========================== remove parenthese from widget categories =================================
+
+/**
+ * 
+ * remove parenthese from widget categories
+ */
 
 add_filter('wp_list_categories','categories_postcount_filter');
 
@@ -13,7 +24,10 @@ function categories_postcount_filter ($variable) {
  }
 
 
-//========================== remove pre text archive title =================================
+/**
+ * 
+ * remove pre text archive title
+ */
 
 add_filter( 'get_the_archive_title', 'my_theme_archive_title' );
 
@@ -34,8 +48,10 @@ function my_theme_archive_title( $title ) {
 	return $title;
 }
 
-
-//========================== Comment Form Placeholder Author, Email, URL (Comment) =================================
+/**
+ * 
+ * Comment Form Placeholder Author, Email, URL (Comment)
+ */
 
 add_filter( 'comment_form_default_fields', 'sabretooth_comment_placeholders' );
 
@@ -58,8 +74,10 @@ function sabretooth_comment_placeholders( $fields ) {
     return $fields;
 }
   
-
-//========================== Add Placehoder in comment Form Textarea (Comment) =================================
+/**
+ * 
+ * Add Placehoder in comment Form Textarea (Comment)
+ */
 
 add_filter( 'comment_form_defaults', 'sabretooth_textarea_placeholder' );
   
@@ -74,8 +92,10 @@ function sabretooth_textarea_placeholder( $fields ) {
 	return $fields;
 }
 
-
-//========================== change comment date format (Comment) =================================
+/**
+ * 
+ * change comment date format (Comment)
+ */
 
 add_filter( 'get_comment_date', 'wpse_comment_date_18350375' ); 
 

@@ -1,12 +1,13 @@
-
 <?php
-
 /**
-* Template Name: Contact
-*/
+ * 
+ * @package Horizon
+ * 
+ * Template Name: Contact
+ */
 
-get_header(); ?>
-
+get_header(); 
+?>
 
     <main>
 
@@ -14,6 +15,5 @@ get_header(); ?>
 
     </main>
 
-
-
-<?php get_footer() ;?>
+<?php 
+get_footer();

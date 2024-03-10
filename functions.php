@@ -1,20 +1,22 @@
-
 <?php 
-
-
-//======================================================
-//                    enqueue scripts
-//======================================================
+/**
+ * 
+ * Horizon Functions 
+ * 
+ * @link https://developer.wordpress.org/themes/basics/theme-functions/
+ * 
+ * @package Horizon
+ */
 
 function load_scripts(){
 
-    //enqueue style   
+    //enqueue style **  
     wp_enqueue_style( 'remixicon', get_template_directory_uri() . '/asset/fonts/remixicon.css',false,'1.1','all');
     wp_enqueue_style( 'owl', get_template_directory_uri() . '/asset/css/owl.carousel.min.css',false,'0.1','all');
     wp_enqueue_style( 'accordioncss', get_template_directory_uri() . '/asset/css/accordion.min.css',false,'0.1','all');
     wp_enqueue_style( 'style', get_template_directory_uri() . '/asset/css/custom.css',false,'0.2','all');
     
-    //enqueue script
+    //enqueue script **
     wp_enqueue_script( 'jquy', get_template_directory_uri() . '/asset/js/jquery-3.6.0.min.js', false, 1.1, true);
     wp_enqueue_script( 'accordionjs', get_template_directory_uri() . '/asset/js/accordion.min.js', false, 1.1, true);
     wp_enqueue_script( 'counterjs', get_template_directory_uri() . '/asset/js/counter.min.js', false, '0.0', true);
@@ -31,8 +33,7 @@ function load_scripts(){
    
     wp_enqueue_script( 'app', get_template_directory_uri() . '/asset/js/app.js', false, '0.0', true);
 
-
-
+    // localize scripts **
     wp_localize_script( 'app', 'my_ajax_obj',
 		array( 
 			'ajax_url' => admin_url( 'admin-ajax.php' ),
@@ -45,6 +46,7 @@ function load_scripts(){
 };
 
 add_action( 'wp_enqueue_scripts', 'load_scripts' );
+
 
 //======================================================
 //                admin enqueue scripts

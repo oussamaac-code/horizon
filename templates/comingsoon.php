@@ -1,14 +1,13 @@
-
-
-
 <?php
-
 /**
-* Template Name: Coming soon 
-*/
+ * 
+ * @package Horizon
+ *  
+ * Template Name: Coming soon 
+ */
 
-get_header(); ?>
-
+get_header(); 
+?>
 
     <main>
 
@@ -16,6 +15,5 @@ get_header(); ?>
 
     </main>
 
-
-
-<?php get_footer() ;?>
+<?php 
+get_footer();

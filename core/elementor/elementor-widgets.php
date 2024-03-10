@@ -1,7 +1,13 @@
 <?php
+/**
+ * 
+ * Elementor Widgets
+ * 
+ * Build and Register you widgets of the theme
+ * 
+ * @package Horizon
+ */
 
-
-// register widgets
 function register_new_widgets( $widgets_manager ) {
 
 	get_template_part('/core/elementor/widgets/widget', 'faq');
@@ -15,9 +21,11 @@ function register_new_widgets( $widgets_manager ) {
 add_action( 'elementor/widgets/register', 'register_new_widgets' );
 
 
-// register new categories
+/**
+ * 
+ * register new categories
+ */
 function add_elementor_widget_categories( $elements_manager ) {
-
 	
 	$elements_manager->add_category(
 		'wildzoo',

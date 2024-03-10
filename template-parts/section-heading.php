@@ -1,5 +1,3 @@
-
-
 <section class="heading">
     <div class="container">
         <div class="text_content">

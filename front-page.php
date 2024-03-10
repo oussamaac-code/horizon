@@ -1,9 +1,21 @@
+<?php
+/**
+ * 
+ * Front Page Template
+ * 
+ * This page is for displaying main Home page.
+ * 
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ * 
+ * @package Horizon
+ */
 
-
-<?php get_header() ;?>
+get_header();
+?>
 
     <main>
-
+        <?php the_content(); ?>
     </main>
 
-<?php  get_footer() ;?>
+<?php  
+get_footer();

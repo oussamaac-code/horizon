@@ -1,8 +1,14 @@
+<?php
+/**
+ * 
+ * This is page admin dashboard
+ * 
+ * This file provide setting for your theme so users can change it in their choices
+ * 
+ * @package Horizon
+ */
 
-
-
-
-
+;?>
 <form action="options.php" method="post">
 
     <?php settings_fields('wildzoo-setting-group') ;?>
@@ -35,6 +41,7 @@
     
                 <!-- The tab widgets -->
                 <div class="tabs-container">
+                    
                     <div id="tabs-1" class="active" >
                         <h2>General Setting</h2>
                         <div class="tab-content">
@@ -44,12 +51,14 @@
                        
                         <br>
                     </div>
+
                     <div id="tabs-2">
                         <h2>Blog Settings</h2>
                         <div class="tab-content">
 
                         </div>
                     </div>
+
                     <div id="tabs-3">
                         <h2>Comming Soon Page</h2>
                         <div class="tab-content">
@@ -57,6 +66,7 @@
                         </div>
 
                     </div>
+
                 </div>
     
             </div>
@@ -66,9 +76,6 @@
     <div class="footer">
         <div class="container">Copyright Wildzoo © 2023. All Rights Reserved.</div>
     </div>
-
-
-   
 
 
 </form>

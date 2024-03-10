@@ -1,8 +1,10 @@
-
-
 <?php 
-
-
+/**
+ * 
+ * Widget file
+ * 
+ * @package Horizon
+ */
 
 class Elementor_Widget_1 extends \Elementor\Widget_Base {
 
@@ -128,5 +130,4 @@ class Elementor_Widget_1 extends \Elementor\Widget_Base {
 
 	<?php }
 
-   
 }

@@ -1,14 +1,15 @@
-
-
 <?php 
-
-// ** @pachage Wildzoo
-//
-
+/**
+ * 
+ * This is page admin dashboard
+ * 
+ * This file provide setting for your theme so users can change it in their choices
+ * 
+ * @package Horizon
+ */
 
 function wildzoo_add_admin_page(){
     
-
     // add menu page
     add_menu_page('Wildzoo Setting', 'WLd Theme', 'manage_options', 'wildzoo-theme', 'wildzoo_theme_dashboard_page', get_template_directory_uri().'/asset/img/icon.svg' , 4 );
 

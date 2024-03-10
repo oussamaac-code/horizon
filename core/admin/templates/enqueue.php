@@ -1,8 +1,12 @@
 <?php 
-
-// ** @pachage Wildzoo
-
-// =============== admin enqueue function ===============
+/**
+ * 
+ * Admin enqueue function
+ * 
+ * Enqueue all you the files css/js for admin settings
+ * 
+ * @package Horizon
+ */
 
 function wildzoo_load_admin_scripts($hook){
 

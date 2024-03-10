@@ -1,4 +1,14 @@
+<?php
+/**
+ * 
+ * This is page admin dashboard
+ * 
+ * This file provide setting for your theme so users can change it in their choices
+ * 
+ * @package Horizon
+ */
 
+;?>
 <div class="all">
 
     <div class="header">

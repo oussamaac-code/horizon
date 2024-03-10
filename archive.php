@@ -1,7 +1,14 @@
+<?php 
+/**
+ * The template for displaying archive pages
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package Horizon
+ */
 
-
-
-<?php get_header() ;?>
+get_header();
+?>
 
     <main>
 
@@ -23,4 +30,5 @@
         
     </main>
 
-<?php  get_footer() ;?>
+<?php  
+get_footer();

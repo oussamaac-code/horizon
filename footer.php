@@ -1,10 +1,17 @@
+<?php
+/**
+ * The template for displaying the footer
+ *
+ * Contains the closing of the #content div and all content after.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package Horizon
+ */
 
-
+?>
 <footer>
-
     <div class="container">
-
-
         <!-- logo -->
         <div class="logo"> 
 
@@ -14,8 +21,6 @@
 
         </div>
 
-
-
         <?php  wp_nav_menu( [
                 
             'theme_location' => 'footer' ,
@@ -23,17 +28,12 @@
 
         ]) ;?>
 
-
         <!-- copyright -->
         <div class="copyright"> © 2023 <a href="<?php echo get_home_url() ;?>"><?php echo get_option('site_name') ;?></a> . All Rights Reserved. </div>
-
     </div>
-
 </footer>
 
-
-
-<?php wp_footer() ;?>
+<?php wp_footer(); ?>
 
 </body>
 </html>

@@ -127,5 +127,6 @@ add_action( 'widgets_init', 'register_my_sidebars' );
 
 
 get_template_part('inc/filter');
+get_template_part('inc/header', 'cart');
 get_template_part('core/admin/function','admin');
 get_template_part('/core/elementor/elementor', 'widgets');

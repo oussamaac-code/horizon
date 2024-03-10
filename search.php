@@ -6,6 +6,7 @@
  *
  * @package Horizon
  */
+
 get_header();
 ?>
 

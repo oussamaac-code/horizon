@@ -10,17 +10,15 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see https://docs.woocommerce.com/document/template-structure/
+ * @see https://woo.com/document/template-structure/
  * @package WooCommerce\Templates
  * @version 3.4.0
  */
 
 defined( 'ABSPATH' ) || exit;
 
-get_header( 'second' );?>
+get_header( 'shop' );
 
-<div class="container">
-<?php
 /**
  * Hook: woocommerce_before_main_content.
  *
@@ -102,11 +100,6 @@ do_action( 'woocommerce_after_main_content' );
  *
  * @hooked woocommerce_get_sidebar - 10
  */
-do_action( 'woocommerce_sidebar' );?>
-
-
-</div>
-
-<?php
+do_action( 'woocommerce_sidebar' );
 
 get_footer( 'shop' );

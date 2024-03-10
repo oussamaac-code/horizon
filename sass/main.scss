@@ -1,8 +1,7 @@
-
-
-// ** Variables
-
+/* Variables
+--------------------------------------------- */
 @import "./variables/variables";
+
 
 body{
 
@@ -34,13 +33,13 @@ img{
     display: none !important;
 }
 
-// ** Components
-
+/* Components
+--------------------------------------------- */
 @import "./components/components";
 
 
 
-// ** Sections
-
+/* Sections
+--------------------------------------------- */
 @import "./sections/sections"
 

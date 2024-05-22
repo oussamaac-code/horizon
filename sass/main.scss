@@ -38,8 +38,20 @@ img{
 @import "./components/components";
 
 
-
 /* Sections
 --------------------------------------------- */
-@import "./sections/sections"
+@import "./sections/sections";
+
+
+/* Blog
+--------------------------------------------- */
+@import "./Blog/main";
+
+
+/* Woocommece
+--------------------------------------------- */
+@import "./woocommerce/woocommerce";
+
+
+
 

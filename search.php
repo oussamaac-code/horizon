@@ -14,7 +14,7 @@ get_header();
 
         <?php $t= get_search_query(); ?>
 
-        <?php get_template_part('template-parts/section', 'heading', ['key'=> $t ]) ;?>
+        <?php get_template_part('templates/parts/section', 'heading', ['key'=> $t ]) ;?>
 
         <br>
         <br>
@@ -23,7 +23,7 @@ get_header();
 
             <?php  if( have_posts() ): while( have_posts() ): the_post() ;?>
 
-                <?php get_template_part('template-parts/blog', 'card') ;?>
+                <?php get_template_part('templates/parts/blog', 'card') ;?>
              
             <?php endwhile; else: endif; ?>
 

@@ -1,0 +1,38 @@
+section.blog.left-sidebar{
+
+    .container{
+
+        display: flex;
+        justify-content: space-between;
+        max-width: 1160px;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+        
+
+        .article{
+            width: 64%;
+
+            @media (max-width:900px){
+                width: 100%;
+            }
+
+            .share{
+
+                @media (min-width: 1340px){
+
+                    //float: left;
+                    //transform: translate(-200%);
+                    //top: 27rem;
+                }
+            }
+        }
+
+        aside{
+            width: 26%;
+            padding-top: 2rem;
+            @media (max-width:900px){
+                width: 100%;
+            }
+        }
+    }
+}

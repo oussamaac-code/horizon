@@ -1,0 +1,86 @@
+// For Blog
+.pagination-nav-links{
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+
+    span,
+    a{
+        width: 42px;
+        height: 42px;
+        display: inline-block;
+        text-align: center;
+        border: 1px solid #00000023;
+        line-height: 40px;
+        margin-right: 6px;
+        color: $grey;
+        display: block;
+        border-radius: 5px;
+        font-size: 13.5px;
+        
+        &:hover{
+            border-color: $main;
+            background-color: $main;
+            color: white;
+
+            
+        }
+
+        
+    }
+
+    span{
+        background-color: $main;
+        border-color: $main;
+        color: white;
+        
+    }
+
+    a.next{
+       color: transparent;
+       position: relative;
+
+
+       &:hover::before{
+        color: white;
+       }
+
+       &::before{
+            content: "\ea6c";
+            font-family: remixicon !important;
+            font-style: normal;
+            position: absolute;
+            top: 50%; right: 50%;
+            transform: translate(50%,-50%);
+            color: $grey;
+            font-size: initial;
+           
+       }
+
+    }
+
+    a.prev{
+        color: transparent;
+        position: relative;
+        font-size: 0;
+     
+ 
+        &:hover::before{
+         color: white;
+        }
+ 
+        &::before{
+             content: "\ea6c";
+             font-family: remixicon !important;
+             font-style: normal;
+             position: absolute;
+             top: 50%; right: 50%;
+             transform: rotate(90deg);
+             transform: translate(50%,-50%) rotate(180deg);
+             color: $grey;
+             font-size: initial;
+            
+        }
+ 
+     }
+}

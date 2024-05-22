@@ -14,14 +14,14 @@ get_header();
 
         <?php $t= get_the_archive_title(); ?>
 
-        <?php get_template_part('template-parts/section', 'heading', ['key'=> $t ]) ;?>
+        <?php get_template_part('templates/parts/section', 'heading', ['key'=> $t ]) ;?>
 
         <div class="container">
             
 
             <?php  if( have_posts() ): while( have_posts() ): the_post() ;?>
 
-                <?php get_template_part('template-parts/blog', 'card') ;?>
+                <?php get_template_part('templates/parts/blog', 'card') ;?>
              
             <?php endwhile; else: endif; ?>
 

@@ -12,6 +12,7 @@ get_header();
 
     <main>
 
+        <!-- Choose Class: middle - right-sidebar - left-sidebar -->
         <section class="blog">
             <div class="container">
                 <div class="article">

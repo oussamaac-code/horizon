@@ -1,0 +1,76 @@
+.blog .share-links{
+
+    ul{
+        padding: 0;
+        list-style: none;
+        display: flex;
+        margin: 0;
+        
+        li{
+            width: 25%;
+            a{
+                width: 100%;
+                display: inline-block;
+                color: white;
+                padding: 9px 0;
+                font-size: 19px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+            }
+
+            &.facebook{
+                background-color: #3B5A99;
+
+                &:hover{
+                    background-color: #30497b;
+                }
+            }
+
+            &.twitter{
+                background-color:#1DA1F2 ;
+
+                &:hover{
+                    background-color: #188ed7;
+                }
+            }
+
+            &.reddit{
+                background-color: #0078B6 ;
+
+                &:hover{
+                    background-color: #04699b;
+                }
+            }
+
+            &.link{
+                background-color: $main;
+
+                .check{
+                    display: none;
+                }
+
+                a.copied{
+
+                    i{
+                        display: none;
+                    }
+                    .check{
+                        display: block;
+                    }
+
+                    
+                }
+
+                &:hover{
+                    background-color: $main-darker;
+                }
+            }
+        }
+
+    }
+}
+
+
+

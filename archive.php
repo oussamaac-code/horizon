@@ -8,11 +8,10 @@
  */
 
 get_header();
+$t= get_the_archive_title();
 ?>
 
     <main>
-
-        <?php $t= get_the_archive_title(); ?>
 
         <?php get_template_part('templates/parts/section', 'heading', ['key'=> $t ]) ;?>
 

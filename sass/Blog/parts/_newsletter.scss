@@ -1,0 +1,58 @@
+.blog .newsletter{
+
+    padding: 2.7rem 5.5rem;
+    background-color: #f058506f;
+    background-color: #E8EBF3;
+    text-align: center;
+    border-radius: 7px;
+    margin: 2rem 0;
+    background: url('./../../asset/img/malphite.jpeg') no-repeat center;
+    background-size: cover;
+
+    @media (max-width: 550px){
+
+        padding: 2.7rem;
+    }
+    p{
+        
+        font-size: 14.5px;
+
+    }
+
+    h4{
+        font-size: 25px;
+        margin-bottom: 1.3rem;
+        margin-top: 1rem;
+        line-height: 1.6;
+        
+        font-weight: 500;
+        color: white;
+    }
+
+    form{
+        margin-top: 2rem;
+
+        p {
+            display: flex;
+            label{
+                flex-grow: 1;
+                margin-right: .6rem;
+                input{
+                    width: 100%;
+                    &:focus{
+                        border:$main 1px solid;
+                    }
+                }
+            }
+
+            input[type='submit']{
+                width: 10rem;
+
+                @media (max-width: 550px){
+
+                   width: 7rem;
+                }
+            }
+        }
+    }
+}

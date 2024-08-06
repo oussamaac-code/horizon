@@ -1,0 +1,26 @@
+.wp-block-categories{
+    padding: 0;
+
+    
+
+    li{
+        list-style: none;
+        margin-bottom: 15px;
+
+
+        a{
+            color: $grey;
+            padding: 5.5px 12px;
+            font-size: 12px;
+            border: 1px solid $grey;
+            border-radius: 20px;
+
+            &:hover{
+                color: $main;
+                border-color: $main;
+            }
+        }
+
+
+    }
+}

@@ -1,0 +1,39 @@
+.widget_block.widget_search{
+
+    form{
+        
+        label{
+            font-size: 18px;
+            margin: 2rem 0 1.5rem;
+            font-weight: 600;
+            color: $main;
+        }
+        .wp-block-search__inside-wrapper{
+            border-radius: 8px;
+            border-color: #ddd;
+            padding: 8px 5px;
+            transition: all .2s ease;
+            &:focus-within{
+
+                border-color: $main !important;
+            }
+
+            input{
+                padding: 3px 12px;
+                padding-right: 2px;
+
+                
+            }
+
+            button{
+                background-color: transparent;
+                border: none;
+                transition: all .2s ease;
+
+                &:hover{
+                    color: $main;
+                }
+            }
+        }
+    }
+}

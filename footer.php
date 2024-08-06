@@ -10,7 +10,7 @@
  */
 
 ?>
-<footer>
+<footer id="main-footer">
     <div class="container">
         <!-- logo -->
         <div class="logo"> 

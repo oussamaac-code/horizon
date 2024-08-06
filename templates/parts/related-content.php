@@ -30,6 +30,8 @@ foreach($postcat as $cat){
                         <?php
 
                     endwhile; 
+
+                    wp_reset_query();
                     
                 endif; 
             ?>

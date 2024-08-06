@@ -1,6 +1,6 @@
 /* Variables
 --------------------------------------------- */
-@import "./variables/variables";
+@import "./variables/main";
 
 
 body{
@@ -8,7 +8,6 @@ body{
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
-
 }
 
 .container{
@@ -16,15 +15,20 @@ body{
     width: 90%;
     max-width: 1200px;
     margin: auto;
-
 }
 
 *{
-    
+
     box-sizing: border-box;
 }
 
+main{
+
+    min-height: 70vh;
+}
+
 img{
+
     max-width: 100%;
     height: auto;
 }
@@ -35,12 +39,12 @@ img{
 
 /* Components
 --------------------------------------------- */
-@import "./components/components";
+@import "./components/main";
 
 
 /* Sections
 --------------------------------------------- */
-@import "./sections/sections";
+@import "./sections/main";
 
 
 /* Blog
@@ -50,7 +54,12 @@ img{
 
 /* Woocommece
 --------------------------------------------- */
-@import "./woocommerce/woocommerce";
+@import "./woocommerce/main";
+
+
+/* Widgets
+--------------------------------------------- */
+@import "./widgets/widgets";
 
 
 

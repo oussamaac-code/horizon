@@ -1,0 +1,24 @@
+ol.wp-block-latest-comments{
+    padding: 0;
+    
+    .wp-block-latest-comments__comment{
+        font-size: 14px;
+
+        article{
+
+            footer{
+                span{
+                    text-transform: capitalize;
+                }
+
+                a{
+                    color: $grey;
+
+                    &:hover{
+                        color: $main;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+body.woocommerce-account{
+
+    main{
+
+        .woocommerce{
+
+            >h2{
+                max-width: 530px;
+                margin: auto;
+                text-align: center;
+            }
+
+            form.login{
+                max-width: 530px;
+                margin: 3rem auto;
+                padding: 2.7rem 2rem 1.5rem;
+                border: 1px solid #ddd;
+
+                p{
+
+                    &:nth-child(3){
+                        display: flex;
+                        align-content: center;
+                        justify-content: space-between;
+                        padding: 1rem 0 0;
+                        flex-wrap: wrap;
+
+                        label{
+                            width: 100%;
+                            
+                        }
+
+                        button{
+                            width: 100%;
+                            margin-top: 1.2rem;
+                        }
+                        &::before,
+                        &::after
+                        {
+                            display: none;
+                        }
+                    }
+
+                    &.woocommerce-LostPassword{
+                        font-size: 14px;
+                        padding-top: .5rem;
+                    }
+                }
+            }
+        }
+    }
+}

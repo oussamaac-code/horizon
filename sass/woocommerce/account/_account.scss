@@ -1,0 +1,111 @@
+.woocommerce-account{
+
+    main .woocommerce{
+        max-width: 1250px;
+        margin: 4rem auto;
+        width: 90%;
+
+        .woocommerce-MyAccount-navigation {
+            
+
+            ul{
+                padding: 0;
+                list-style: none;
+                margin-right: 1rem;
+                padding: 1rem 2rem;
+                background-color: #F5F5F5;
+                border-radius: 3px;
+
+                li{
+                    padding: 20px 0px;
+                    font-size: 14.5px;
+                    border-bottom: 1px solid #e8e8e8;
+                    font-weight: 400;
+                    transition: all .3s ease;
+
+                    a:hover{
+                        color: $main;
+                    }
+
+                    &:last-child{
+                        border: 0;
+                    }
+
+                    &.is-active{
+                       color: $main;
+                    }
+
+                    &.woocommerce-MyAccount-navigation-link--customer-logout{
+                        &::before{
+                           content:  "\f126";
+                           font-family: remixicon !important;
+                            font-style: normal;
+                            display: inline-block;
+                            font-size: 18px;
+                            color: red;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .woocommerce-MyAccount-content{
+
+            // Address
+            .woocommerce-Addresses{
+
+                .woocommerce-Address{
+
+                    header{
+                        padding: 8px 18px;
+                        background-color: #f6f6f6;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-bottom: 1rem;
+
+
+                        h3{
+                            font-weight: 500;
+                            margin: .5rem 0;
+                            font-size: 15.5px;
+                            color: $main;
+                        }
+
+                        a{
+                            font-size: 14px;
+                        }
+
+                        &::before,
+                        &::after{
+                            display: none;
+                        }
+
+                    }
+
+                    address{
+                        font-style: normal;
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            // Edit Account
+            .woocommerce-EditAccountForm{
+
+
+                fieldset{
+                    padding: 0;
+                    border: 0;
+                    margin-top: 1.4rem;
+
+                    legend{
+                        color: $main;
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

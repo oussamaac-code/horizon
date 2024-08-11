@@ -1,0 +1,25 @@
+// Select ordering
+.woocommerce .woocommerce-ordering{
+
+    padding: 0 11px;
+    border: 1px solid #f8f8f8;
+    margin-bottom: 0rem;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+
+    @media (max-width: 550px){
+        width: 100%;
+    }
+    select{
+        height: 2.8rem;
+        outline: none;
+        font-family: $inter;
+        border: 0;
+        padding: 0 9px 0 0;
+        background-color: transparent;
+
+        @media (max-width: 550px){
+            width: 100%;
+        }
+    }
+}

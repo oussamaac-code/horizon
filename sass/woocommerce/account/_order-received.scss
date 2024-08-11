@@ -1,0 +1,36 @@
+.woocommerce ul.order_details{
+
+    padding: 0;
+    margin: 2rem 0;
+
+    li{
+        strong{
+            padding: 1rem 0;
+            font-weight: 600;
+        }
+    }
+}
+
+section.woocommerce-customer-details{
+
+    section.addresses{
+        margin: 3rem 0;
+        div.woocommerce-column{
+            margin-bottom: 1.5rem;
+
+            h2.woocommerce-column__title{
+                font-weight: 600;
+                font-size: 20px;
+                color: $main;
+            }
+
+            address{
+                border: 1px solid #eaeaea;
+                border-radius: 0;
+                padding: 1.5rem;
+                line-height: 1.5;
+            }
+
+        }
+    }
+}

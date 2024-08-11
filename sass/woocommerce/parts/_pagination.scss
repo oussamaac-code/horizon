@@ -1,0 +1,30 @@
+.woocommerce nav.woocommerce-pagination{
+
+    ul {
+        border: none;
+
+        li{
+    
+            margin: 3px;
+            border: none;
+            font-size: 14.5px;
+
+            span.current{
+                background-color: #f1f1f1;
+                color: $text;
+
+                padding: .7em .8em;
+            }
+
+            a{
+                padding: .7em .8em;
+                &:hover{
+                    background-color: #f1f1f1;
+                    color: $main;
+                }
+            }
+
+        }
+    }
+    
+}

@@ -41,8 +41,8 @@ if ( ! function_exists( '_depot_header_login_button' ) ) {
                     </div>
                     <div class="sub-menu">
                         <ul>
-                            <li><a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('My Account',''); ?>"><?php _e('My Account',''); ?></a></li>
-                            <li><a href="<?php echo wp_logout_url(home_url($_SERVER['REQUEST_URI']));?>" title="Logout"><?php _e('Log out',''); ?></a></li>
+                            <li><a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="<?php _e('My Account','textdomain'); ?>"><?php _e('My Account','textdomain'); ?></a></li>
+                            <li><a href="<?php echo wp_logout_url(home_url($_SERVER['REQUEST_URI']));?>" title="Logout"><?php _e('Log out','textdomain'); ?></a></li>
                         </ul>
                     </div>
                 </div>
@@ -54,7 +54,7 @@ if ( ! function_exists( '_depot_header_login_button' ) ) {
                 <div class="login-header">
                     <div class="top user-logout">
                         <a href="">
-                            <span>login</span>
+                            <span><i class="ri-user-3-line"></i></span>
                         </a>
                     </div>
                 </div>
@@ -163,8 +163,8 @@ if ( ! function_exists( '_depot_login_form' ) ) {
                     
                     <div class="login-register-content">
                         <ul class="tablist">
-                            <li class="login"><a href="" class="active">Login</a></li>
-                            <li class="register"><a href="">Register</a></li>
+                            <li class="login"><a href="" class="active"> <?php _e('Login', 'textdomain'); ?></a></li>
+                            <li class="register"><a href=""> <?php _e('Register', 'textdomain'); ?></a></li>
                         </ul>
 
                         <div class="login-form oppened">
@@ -175,9 +175,9 @@ if ( ! function_exists( '_depot_login_form' ) ) {
                                 <div class="links">
                                     <div class="remember-me">
                                         <input type="checkbox" name="uremember" id="uremember">
-                                        <label for="remember">Remember me</label>
+                                        <label for="remember"> <?php _e('Remember me', 'textdomain'); ?> </label>
                                     </div>
-                                    <a href="<?php echo  wp_lostpassword_url();?>" class="lost_password">Lost your password?</a>
+                                    <a href="<?php echo  wp_lostpassword_url();?>" class="lost_password"> <?php _e('Lost your password?', 'textdomain'); ?> </a>
                                 </div>
                                 <input type="submit" value="login" class="button">
                             </form>

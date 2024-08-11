@@ -130,6 +130,7 @@ get_template_part('inc/filter');
 get_template_part('inc/header', 'cart');
 get_template_part('inc/login', 'header');
 get_template_part('inc/search', 'header');
+get_template_part('inc/woocommerce', 'setup');
 get_template_part('core/admin/function','admin');
 get_template_part('/core/elementor/elementor', 'widgets');
 get_template_part('/core/demo/demo', 'import');

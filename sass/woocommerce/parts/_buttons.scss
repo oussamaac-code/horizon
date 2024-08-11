@@ -1,0 +1,62 @@
+// Woocommerce a button
+
+.woocommerce a.button{
+
+    border-radius: 3px;
+    font-weight: 500;
+    color: white;
+    background-color: $main;
+
+    &:hover{
+        background-color: $main-darker;
+        color: white;
+    }
+
+}
+
+
+// Woocommerce Button
+
+.woocommerce button.button{
+
+    background-color: $main;
+    color: white !important;
+    font-weight: 500;
+    padding: 0 25px !important;
+    transition: all .3s ease;
+    height: 3.2rem;
+
+    
+
+    &:hover{
+        background-color: $main-darker;
+        color: white;
+    }
+
+
+}
+
+
+// Proceed to checkout Button
+
+#add_payment_method .wc-proceed-to-checkout, 
+.woocommerce-cart .wc-proceed-to-checkout, 
+.woocommerce-checkout .wc-proceed-to-checkout{
+    padding-bottom: 0;
+
+    a.checkout-button{
+        font-weight: 600;
+        margin-bottom: 0;
+        padding: 1.1rem 1.2em;
+        font-size: 15px;
+        border-radius: 0;
+        background-color: $main;
+        border-radius: 3px;
+
+        &:hover{
+            background-color: $main-darker;
+        }
+    }
+}
+
+

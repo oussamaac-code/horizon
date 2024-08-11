@@ -1,0 +1,43 @@
+// Woocommerce notices
+
+.woocommerce-error, .woocommerce-info, .woocommerce-message{
+    border-top: 0;
+    background-color: #fafafa;
+    font-size: 14px;
+    margin-bottom: 0;
+    line-height: 1.75;
+    margin-bottom: 2rem;
+
+    &::before{
+        color: $main;
+        @media (max-width:550px) {
+            top: 17px;
+            
+        }
+    }
+}
+
+.woocommerce-error{
+
+    li{
+        margin-bottom: 9px;
+        font-size: 14px;
+        strong{
+            font-weight: 600;
+        }
+    }
+
+    &::before{
+        color: crimson;
+    }
+}
+
+.woocommerce-notices-wrapper{
+    outline: none;
+    border: none;
+
+    ul{
+        border: 0;
+        outline: none;
+    }
+}

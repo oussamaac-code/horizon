@@ -1,0 +1,209 @@
+body.woocommerce-shop,
+body.woocommerce.archive{
+
+    .heading-product{
+        position: relative;
+        height: 16rem;
+        overflow: hidden;
+        padding: 2.5rem 0;
+        margin-bottom: 2rem;
+
+        display: flex;
+        align-items: center;
+        text-align: center;
+
+
+        @media (max-width:900px){
+            height: 14rem;
+        }
+
+        .container{
+            position: relative;
+            z-index: 1;
+            h1{
+                font-size: 40px;
+                margin-bottom: 1rem;
+                margin-top: .2rem;
+
+                @media (max-width:900px){
+                    font-size: 37px;
+                }
+            }
+            .woocommerce-breadcrumb{
+                font-size: 14px;
+                font-weight: 300;
+                margin-bottom: 1rem;
+
+                a{
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 0;
+            background-color: #f8f8f8;
+        }
+
+        img{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+    }
+
+
+    .product-all-wrapper .container{
+        max-width: 1180px;
+        margin: 4rem auto 5rem;
+
+        @media (max-width: 550px){
+            margin: 3rem auto 3rem;
+        }
+
+        .product-listing{
+
+            .product-list-top{
+                display: flex;
+                align-items: center;
+                margin-bottom: 2.2rem;
+
+                @media (max-width:550px){
+                    flex-direction: column;
+                    align-items: flex-start !important;
+                }
+
+                form{
+                    margin-left: auto;
+
+                    @media (max-width:550px){
+                        margin-left: 0;
+                    }
+                }
+
+                .filter-product-btn {
+
+                    @media (max-width: 550px){
+                        margin-bottom: 1rem;
+                    }
+
+                    a{
+                        font-weight: 300;
+    
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                        i{
+                            margin-right: 4px;
+                        }
+                    }
+                }
+                    
+
+                .woocommerce-result-count{
+                    margin-bottom: 0;
+                    margin-left: 3rem;
+                    font-weight: 300;
+                    color: black;
+
+                    @media (max-width:550px){
+                        display: none;
+                    }
+                }
+
+            }
+        }
+    }
+
+
+    aside#secondary{
+
+        list-style: none;
+        position: fixed;
+        top: 0;
+        left: -500px;
+        width: 80vw;
+        height: 100%;
+        max-width: 480px;
+        background-color: #f6f6f5;
+        background-color: white;
+        overflow: scroll;
+        padding: 6rem  2.3em 2rem;
+        z-index: 20;
+        transition: all .3s ease;
+
+
+        @media (max-width:550px){
+            width: 100vw;
+        }
+
+        &.open{
+            left: 0;
+        }
+
+        .top-sidebar{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 4rem;
+            padding: 1rem 1.5rem;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #111111;
+            color: white;
+
+            .title{
+                font-size: 17px;
+            }
+            .close-button{
+                font-size: 27px;
+                color: #768079;
+
+                &:hover{
+                    color: white;
+
+                }
+            }
+
+        }
+
+
+        h3.wp-block-heading{
+            font-size: 14.5px;
+            text-transform: uppercase;
+            color: $main;
+            margin-bottom: 2rem;
+            margin-top: 2.5rem;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        >li{
+            margin-bottom: 2rem;
+        }
+
+        .widget_block.widget_search form .wp-block-search__inside-wrapper{
+            background-color: white;
+
+            input{
+                font-size: 13.5px;
+            }
+        }
+
+    }
+
+
+}

@@ -1,0 +1,36 @@
+// woocommerce coupon cart
+
+.woocommerce-page table.cart td.actions .coupon {
+
+    input.input-text, button{
+        height: 3.2rem;
+    }
+
+    input.input-text{
+        min-width: 10rem;
+        padding: 0 14px;
+        font-family: $inter;
+        border: 1px solid #ddd;
+        margin-right: 8px;
+    }
+
+    button{
+        background-color: $main;
+        color: white;
+        font-weight: 400;
+        padding: 0 25px;
+        transition: all .3s ease;
+
+        &::before{
+            content: "\f20d";
+            font-family: remixicon !important;
+            font-style: normal;
+            margin-right: 12px;
+            font-size: 17px;
+        }
+
+        &:hover{
+            background-color: $main-darker;
+        }
+    }
+}

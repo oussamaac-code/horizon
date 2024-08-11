@@ -1,0 +1,166 @@
+//  Reviews 
+.woocommerce #reviews #comments  {
+    
+    h2{
+        font-size: 22px;
+        font-weight: 600;
+        margin: 1.5rem 0 2.3rem;
+    }
+
+    ol.commentlist{
+        padding: 0 0rem;
+
+        li{
+            border-bottom: 1px solid #ececec;
+            img.avatar{
+                height: 50px;
+                width: 50px;
+                border-radius: 100px;
+                border: 0;
+                background-color: transparent;
+                padding: 0;
+
+            }
+
+            .comment-text{
+                margin: 0 0 0 60px;
+                border: 0;
+                padding-top: 0rem;
+
+
+                .star-rating{
+                    color: #FABC05;
+                    color: $main;
+                }
+
+                p.meta{
+
+                    .woocommerce-review__author{
+
+                        font-weight: 500;
+                        font-size: 15px;
+                        text-transform: capitalize;
+                        color: black;
+                    }
+                }
+
+                .description{
+                    padding-right: 7.5rem;
+                    p{
+                        font-size: 14.5px;
+                        line-height: 1.99;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+.woocommerce #review_form #respond{
+
+    #reply-title{
+        padding: 1rem;
+        border: 1px solid black;
+        display: inline-block;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 2rem;
+    }
+
+
+    form{
+        padding: 2rem;
+        background-color: #fafafa;
+        border-radius: 5px;
+
+        >p{
+            clear: both;
+        }
+
+        .comment-form-rating{
+
+            display: flex;
+            align-items: center;
+            margin-bottom: .5rem;
+
+            .stars{
+                margin-bottom: 0;
+                color: $main;
+
+                span{
+                    display: inline-block;
+                    line-height: 1;
+                }
+            }
+            label{
+              
+              margin-right: 10px;
+            }
+        }
+
+        .comment-form-author{
+            width: 48%;
+            float: left;
+            clear: none;
+
+            label{
+                display: block;
+            }
+
+            input{
+                width: 100%;
+            }
+        }
+
+        .comment-form-email{
+            width: 48%;
+            float: right;
+            clear: none;
+            label{
+                display: block;
+            }
+
+            input{
+                width: 100%;
+            }
+        }
+
+        .comment-form-cookies-consent{
+            display: none;
+        }
+
+        .form-submit{
+            margin-top: 7rem;
+
+            input{
+                border-radius: 3px;
+                background-color: black;
+                color: white;
+
+                transition: all .3s ease;
+                font-weight: 500;
+                height: 3.1rem;
+                font-size: 14px;
+                min-width: 10rem;
+
+                &:hover{
+                    background-color: $main-darker;
+
+                }
+            }
+        }
+    }
+}
+
+
+// Woocommerce Start rating
+
+.woocommerce .star-rating{
+
+    span{
+
+        font-family: 'star' !important;
+    }
+}

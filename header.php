@@ -54,12 +54,41 @@
         
         <!-- header end -->
         <div class="end"> 
+            
+            <!-- search -->
+            <?php
+                if ( function_exists( '_depot_header_search_button' ) ) {
+                    _depot_header_search_button();
+                }
+            ?>
+
+            <!-- login -->
+            <?php
+                if ( function_exists( '_depot_header_login_button' ) ) {
+                    _depot_header_login_button();
+                }
+            ?>
+
+
+            <!-- cart -->
+
+            <div class="mini-cart">
+                <?php
+                    if ( function_exists( 'horizon_woocommerce_header_cart' ) ) {
+                        horizon_woocommerce_header_cart();
+                    }
+                ?>
+            </div>
 
         </div>
 
 
         <!-- mobile menu -->
         <div class="mobile-menu">
+
+            <div class="top">
+                <a href="" class="close"><i class="ri-close-large-line"></i></a>
+            </div>
 
              <?php  wp_nav_menu( [
                 

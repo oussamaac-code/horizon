@@ -1,0 +1,49 @@
+.site-loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100001;
+    width: 100vw;
+    will-change: transform;
+    transition: background .8s cubic-bezier(.86,0,.07,.995);
+
+    &.hide{
+
+        .loader-bg{
+            transform: scaleY(0);
+        }
+
+        .loader-icon{
+            opacity: 0;
+            @include siteLoaderOut();
+        }
+    }
+
+    .loader-icon{
+        position: relative;
+        transition: opacity .4s;
+        text-align: center;
+        z-index: 2;
+
+        img{
+            width: 7rem;
+        }
+    }
+
+    .loader-bg{
+        background-color: white;
+        transition: transform .9s cubic-bezier(.86,0,.07,.995);
+        transform: scaleY(1);
+        transform-origin: top;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+}

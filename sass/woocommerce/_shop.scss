@@ -3,7 +3,7 @@ body.woocommerce.archive{
 
     .heading-product{
         position: relative;
-        height: 16rem;
+        height: 13rem;
         overflow: hidden;
         padding: 2.5rem 0;
         margin-bottom: 2rem;
@@ -17,22 +17,30 @@ body.woocommerce.archive{
             height: 14rem;
         }
 
+        @media (max-width:550px){
+            height: 10.5rem;
+        }
+
         .container{
             position: relative;
             z-index: 1;
             h1{
-                font-size: 40px;
+                font-size: 37px;
                 margin-bottom: 1rem;
-                margin-top: .2rem;
+                margin-top: .3rem;
 
                 @media (max-width:900px){
                     font-size: 37px;
+                }
+
+                @media (max-width:550px){
+                   font-size: 33px;
                 }
             }
             .woocommerce-breadcrumb{
                 font-size: 14px;
                 font-weight: 300;
-                margin-bottom: 1rem;
+                margin-bottom: 1.2rem;
 
                 a{
                     text-decoration: underline;
@@ -62,6 +70,12 @@ body.woocommerce.archive{
         }
     }
 
+    .woocommerce-no-products-found{
+        max-width: 1180px;
+        width: 87%;
+        margin: auto;
+    }
+
 
     .product-all-wrapper .container{
         max-width: 1180px;
@@ -85,6 +99,11 @@ body.woocommerce.archive{
 
                 form{
                     margin-left: auto;
+                    &:lang(ar){
+                        margin-left: 0;
+                        margin-right: auto;
+                        
+                    }
 
                     @media (max-width:550px){
                         margin-left: 0;
@@ -97,15 +116,27 @@ body.woocommerce.archive{
                         margin-bottom: 1rem;
                     }
 
+                    &:lang(ar){
+                           position: relative;
+                           padding-right: 1.3rem;
+                            
+                        }
+
                     a{
                         font-weight: 300;
     
                         &:hover{
                             text-decoration: underline;
                         }
-                        i{
-                            margin-right: 4px;
-                        }
+                    }
+                    i{
+                        &:lang(ar){
+                                display: block;
+                                position: absolute;
+                                right: 0;
+                                bottom: 0;
+                                
+                            }
                     }
                 }
                     
@@ -116,7 +147,13 @@ body.woocommerce.archive{
                     font-weight: 300;
                     color: black;
 
-                    @media (max-width:550px){
+                    &:lang(ar){
+                        margin-left: 0;
+                        margin-right: 5rem;
+                        
+                    }
+
+                    @media (max-width:750px){
                         display: none;
                     }
                 }
@@ -131,20 +168,21 @@ body.woocommerce.archive{
         list-style: none;
         position: fixed;
         top: 0;
-        left: -500px;
+        left: -470px;
         width: 80vw;
         height: 100%;
-        max-width: 480px;
+        max-width: 460px;
         background-color: #f6f6f5;
         background-color: white;
         overflow: scroll;
-        padding: 6rem  2.3em 2rem;
+        padding: 6rem  2.3em 0rem;
         z-index: 20;
         transition: all .3s ease;
 
 
         @media (max-width:550px){
-            width: 100vw;
+            width: 90vw;
+            padding: 6rem 1.7rem 2rem;
         }
 
         &.open{
@@ -162,18 +200,19 @@ body.woocommerce.archive{
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background-color: #111111;
-            color: white;
+            background-color: #f3f3f3;
+            color: rgb(0, 0, 0);
 
             .title{
-                font-size: 17px;
+                font-size: 16.5px;
+                font-weight: 500;
             }
             .close-button{
                 font-size: 27px;
                 color: #768079;
 
                 &:hover{
-                    color: white;
+                    color: rgb(55, 55, 55);
 
                 }
             }

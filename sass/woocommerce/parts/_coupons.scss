@@ -2,6 +2,8 @@
 
 .woocommerce-page table.cart td.actions .coupon {
 
+    display: flex;
+    flex-wrap: wrap;
     input.input-text, button{
         height: 3.2rem;
     }
@@ -12,6 +14,20 @@
         font-family: $inter;
         border: 1px solid #ddd;
         margin-right: 8px;
+        margin-bottom: 1rem;
+
+        &:lang(ar){
+                        
+            margin-right: 0;
+            margin-left: 8px;
+        }
+
+        @media (max-width: 550px){
+            margin-right: 0;
+            margin-top: 1rem;
+            width: 100%;
+
+        }
     }
 
     button{
@@ -27,6 +43,14 @@
             font-style: normal;
             margin-right: 12px;
             font-size: 17px;
+        }
+
+        &:lang(ar){
+            &::before{
+
+                margin-right: 0;
+                margin-left: 12px;
+            }
         }
 
         &:hover{

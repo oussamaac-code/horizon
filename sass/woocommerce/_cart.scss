@@ -2,7 +2,6 @@ body.woocommerce-cart{
 
     header{
         .mini-cart{
-
             >ul li:last-child{
                 display: none;
             }
@@ -11,26 +10,32 @@ body.woocommerce-cart{
 
     .woocommerce-notices-wrapper, .return-to-shop , .wc-empty-cart-message{
         max-width: 1245px;
-        margin: auto;
-        margin-bottom: 2rem;
+        margin: 0rem auto 1rem;
         width: 90%;
+
+        .woocommerce-message{
+            margin-bottom: 0rem;
+        }
     }
-
-
 
     section.heading-cart{
         position: relative;
         color: white;
-        text-align: center;
-        height: 20vw;
+        height: 18vw;
         display: flex;
         align-items: center;
         overflow: hidden;
-        margin-bottom: 3rem;
+        margin-bottom: 2.2rem;
 
         @media (max-width: 800px){
             height: 42vw;
         }
+
+        @media (max-width: 550px){
+            height: 55vw;
+            margin-bottom: 1.5rem;
+        }
+
 
         img{
             position: absolute;
@@ -43,9 +48,13 @@ body.woocommerce-cart{
         }
 
         h1{
-            font-size: 40px;
+            font-size: 55px;
+            @media (max-width: 550px){
+                font-size: 35px;
+            }
 
         }
+
     }
 
 
@@ -54,8 +63,9 @@ body.woocommerce-cart{
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: start;
-        margin: 2rem auto 4rem;
-        max-width: 1270px !important;
+        margin: 1rem auto 4rem;
+        max-width: 1250px !important;
+        width: 90%;
 
         .woocommerce-notices-wrapper{
             width: 100%;
@@ -63,8 +73,13 @@ body.woocommerce-cart{
 
         >form{
             width: 62%;
-            width: 100%;
+            //width: 100%;
             margin-bottom: 1.7rem;
+
+
+            @media (max-width:1050px){
+                width: 100%;
+            }
 
             table{
                 border-bottom: 0;
@@ -74,29 +89,60 @@ body.woocommerce-cart{
 
                     &.shop_table_responsive{
                         thead{
-                            display: none;
+                           display: block;
+
+                            tr{
+                                    display: flex;
+                                    justify-content: space-between;
+                                    font-size: 12px;
+                            }
+
+                           th{
+                                padding-left: 0;
+                                font-size: 12px;
+                           }
+
+                           .product-quantity,
+                           .product-remove{
+                                display: none;
+                           }
+
                         }
     
                         tbody{
                             tr{
     
-                                display: table-row ;
                                 display: flex;
                                 flex-wrap: wrap;
+
+                                display: grid;
+                                grid-template-columns: 96px 2fr 1fr;
+
                                 border-top: 1px solid rgba(0, 0, 0, .1);
-                                align-items: center;
     
                                 td{
     
                                     display: table-cell;
                                     text-align: left !important;
                                     border: 0;
-                                    padding:15px 10px;
+                                    padding:19px 10px;
 
                                     &.product-remove{
                                        
                                         padding-left: 0;
-                                        width: 50%;
+                                        order: 6;
+                                        
+                                        width: 100%;
+                                        display: flex;
+                                        justify-content: end;
+                                        align-items: start;
+                                        padding-top: 15px;
+                                        a{
+                                            text-align: right;
+                                            width: 1.2rem;
+                                            height: 1.2rem;
+                                        }
+
 
                                     }
 
@@ -104,27 +150,55 @@ body.woocommerce-cart{
                                         display: none;
                                     }
 
+                                    &.product-quantity{
+                                        order: 4;
+                                        grid-column: 1 / 3;
+                                        padding-left: 0;
+                                        padding-top: 2px;
+                                    }
+
+                                    &.product-name{
+                                        padding-right: 0;
+
+                                        a{
+                                            font-size: 15.5px;
+                                            padding-right: .5rem;
+                                        }
+                                    }
+
                                     &.product-thumbnail{
-                                        //display: none;
-                                        width: 50%;
-                                       a{
-                                        justify-content: end;
-                                       }
+                                        width: 95px;
+                                        padding: 14px 0;
                                         
                                     }
+                                    
                                     &.product-subtotal{
                                         margin-left: auto;
+                                        padding-right: 0;
+                                        padding-left: 0;
+                                        display: block;
+                                        text-align: right !important;
+                                        font-size: 14px;
+                                        bdi{
+                                            text-wrap: wrap;
+                                            display: block;
+                                        }
+
+                                        @media (max-width:550px){
+                                            span{
+                                                display: block;
+                                            }
+                                        }
 
                                         &::before{
-                                            display: inline-block;
-                                            margin-right: 6px;
-                                            font-weight: 600;
+                                            display: none;
                                         }
                                     }
 
                                     &.actions{
 
                                        padding : 22px  0;
+                                       grid-column: 1 / 4;
 
                                         .coupon{
                                             display: flex;
@@ -132,10 +206,6 @@ body.woocommerce-cart{
                                             button{
                                                 width: auto;
                                                 font-size: 13px;
-
-                                                &:before{
-                                                    display: none;
-                                                }
                                             }
                                         }
 
@@ -143,30 +213,32 @@ body.woocommerce-cart{
                                             width: auto;
                                         }
                                     }
-
                                 }
                             }
                         }
                     }
                 }
 
-
                 thead{
-                    background-color: #f9f9f9cb;
+
                     th{
+                        border-bottom: 1px solid #ddd;
                         text-transform: uppercase;
-                        font-size: 14px;
+                        font-size: 13px;
                         padding: 20px 0px 20px 12px;
-                        color: black;
+                        color: rgb(95, 95, 95);
+                        font-weight: 500;
+
 
                         &.product-subtotal{
+                            text-align: right;
+                            
                         }
 
                         &.product-price{
-                            @media (max-width: 800px){
-                                display: none !important;
-                            }
+                            display: none;
                         }
+
                     }
                 }
 
@@ -186,43 +258,112 @@ body.woocommerce-cart{
 
                     td{
                         font-size: 13.7px;
-                        padding: 11px 0px 11px 12px;
-
-
+                        padding: 22px 0px 22px 12px;
 
                         a{
                             &:hover{
-                                text-decoration: underline;
+                                //text-decoration: underline;
                                 color: $main;
                             }
+                        }
+
+                        &.product-remove{
+                            width: 3rem;
+                            text-align: left;
+
+                            a{
+                                width: 1.2rem;
+                                height: 1.2rem;
+                                overflow: hidden;
+                                color: black;
+
+
+                                &:hover::before{
+                                    color: red;
+                                }
+
+                                &::before{
+
+                                    content: "\ec22";
+                                    font-family: remixicon !important;
+                                    font-style: normal;
+                                    display: inline-block;
+                                    width: 1.2rem;
+                                    height: 1.2rem;
+                                    color: black;
+                                    font-weight: 300;
+                                    transition: all .3s ease;
+                                    font-size: 17px;
+                                    
+
+                                }
+
+                            }
+
                         }
 
                         &.product-name{
                             max-width: 15rem;
                             line-height: 1.89;
+                            vertical-align:top;
+                            padding-right: 1rem;
+
+                            a{
+                                font-size: 15.5px;
+                                font-weight: 500;
+                                display: block;
+                                margin-bottom: .3rem;
+                                line-height: 1.8;
+                            }
+
+                            .price{
+                                
+                                ins{
+                                    
+                                    text-decoration: none;
+                                }
+                                del{
+                                    display: none;
+                                }
+                            }
+
+                            .variation{
+                                margin-top: .4rem;
+                                p{
+                                    margin-top: 0;
+                                }
+                            }
+                        }
+
+                        &.product-quantity{
+                            vertical-align: top;
                         }
 
                         &.product-subtotal{
                             min-width: 10px;
+                            vertical-align: top;
+                            font-size: 15px;
+                            color: black;
+                            font-weight: 400;
+                            text-align: right;
                         }
 
                         &.product-thumbnail{
+                            width: 110px;
                             a{
                                 display: flex;
                                 align-items: center;
 
                                 img{
-                                    width: 60px;
-                                    height: 60px;
+                                    width: 90px;
+                                    height: 90px;
                                     background-color: #fafafa;
                                 }
                             }
                         }
 
                         &.product-price{
-                            @media (max-width: 800px){
-                                display: none !important;
-                            }
+                            display: none !important;
                         }
 
                         &.actions{
@@ -244,6 +385,16 @@ body.woocommerce-cart{
                                     font-style: normal;
                                     margin-right: 12px;
                                     font-size: 17px;
+
+                                }
+
+                                &:lang(ar){
+                                    
+                                    &::before{
+
+                                        margin-right: 0;
+                                        margin-left: 12px;
+                                    }
                                 }
                                 
     
@@ -255,28 +406,31 @@ body.woocommerce-cart{
                             }
                         }
 
-
                     }
                 }
-            }
 
+            }
 
         }
 
         .cart-collaterals{
-            width: 44%;
-            padding: 3.2rem;
+            width: 34%;
+            //width: 44%;
+            padding: 2.8rem;
             margin-left: auto;
             background-color: #f8f8f8;
-            border-radius: 3px;
+            border-radius: 10px;
 
-            @media (max-width:800px){
+            &:lang(ar){
+                        
+                 margin-left: 0;       
+            }
+
+            @media (max-width:1050px){
                 width: 100%;
                 padding: 2.2rem 1.5rem;
 
             }
-
-
 
             .cart_totals{
                 width: 100%;
@@ -289,20 +443,32 @@ body.woocommerce-cart{
 
                 td{
                     text-align: right;
+                    line-height: 1.7;
+
+                    
+                }
+
+                ul#shipping_method .amount{
+                    font-weight: 600;
+                }
+
+                strong{
+                    font-weight: 600;
                 }
 
                 td, th{
                     font-size: 14.7px;
-                    padding: 20px 0;
+                    padding: 22px 0;
+                    line-height: 1.9;
 
                     @media (max-width:550px){
                         font-size: 14px;
                     }
                 }
             }
+
         }
 
     }
-
 
 }

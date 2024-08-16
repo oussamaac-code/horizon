@@ -8,6 +8,54 @@ body{
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .woocommerce-store-notice, p.demo_store{
+        
+        font-size: 14px;
+        background-color: $main;
+        padding: .85em 1.5rem;
+        line-height: 1.75;
+        position: relative;
+        box-shadow: none;
+        z-index: 1;
+
+        order: -1;
+
+        @media (max-width: 550px){
+            padding: 1em 1.5rem;
+        }
+
+        a{
+            font-size: 0;
+            text-decoration: none;
+            display: none;
+
+            &::after{
+                content: "\f4c8";
+                font-family: remixicon !important;
+                font-style: normal;
+                font-size: 15px;
+                position: absolute;
+                right: 1em;
+                top: .71em;
+
+                transition: all .3s ease;
+
+            }
+
+            &:hover{
+                &::after{
+                    transform: rotate(90deg);
+                }
+            }
+
+        }
+
+
+    }
 }
 
 .container{

@@ -2,16 +2,23 @@
 .woocommerce #reviews #comments  {
     
     h2{
-        font-size: 22px;
+        font-size: 20px;
         font-weight: 600;
         margin: 1.5rem 0 2.3rem;
+        line-height: 1.55;
+
+        @media (max-width:550px){
+            font-size: 18px;
+        }
     }
+
 
     ol.commentlist{
         padding: 0 0rem;
 
         li{
             border-bottom: 1px solid #ececec;
+
             img.avatar{
                 height: 50px;
                 width: 50px;
@@ -27,13 +34,24 @@
                 border: 0;
                 padding-top: 0rem;
 
+                @media (max-width:550px){
+                    margin: 0 0 0 50px;
+                }
+
 
                 .star-rating{
-                    color: #FABC05;
+                    
                     color: $main;
+                    font-size: 15px;
+
+                    @media (max-width:550px){
+                        font-size: 14px;
+                    }
                 }
 
                 p.meta{
+
+                   
 
                     .woocommerce-review__author{
 
@@ -42,10 +60,18 @@
                         text-transform: capitalize;
                         color: black;
                     }
+
+                    span{
+                        display: none;
+                    }
+
+                    time{
+                        display: block;
+                    }
                 }
 
                 .description{
-                    padding-right: 7.5rem;
+                    padding-right: 0rem;
                     p{
                         font-size: 14.5px;
                         line-height: 1.99;
@@ -67,6 +93,7 @@
         font-size: 14px;
         font-weight: 400;
         margin-bottom: 2rem;
+        line-height: 1.6;
     }
 
 
@@ -74,6 +101,10 @@
         padding: 2rem;
         background-color: #fafafa;
         border-radius: 5px;
+
+        @media (max-width: 550px){
+            padding: 1rem;
+        }
 
         >p{
             clear: both;
@@ -104,6 +135,7 @@
             width: 48%;
             float: left;
             clear: none;
+            margin-bottom: 1rem;
 
             label{
                 display: block;
@@ -132,7 +164,7 @@
         }
 
         .form-submit{
-            margin-top: 7rem;
+            margin-top: 1rem;
 
             input{
                 border-radius: 3px;
@@ -162,5 +194,24 @@
     span{
 
         font-family: 'star' !important;
+    }
+}
+
+
+// Additional Information
+
+.woocommerce .woocommerce-Tabs-panel--additional_information{
+
+    table.shop_attributes{
+        td{
+            font-style: normal;
+        }
+    }
+}
+
+.woocommerce div.product .woocommerce-tabs .panel{
+
+    p{
+        font-size: 14.5px;
     }
 }

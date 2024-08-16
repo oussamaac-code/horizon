@@ -5,6 +5,11 @@
     border-right: 0;
     border-radius: 0;
 
+    p{
+        font-size: inherit;
+        line-height: inherit;
+    }
+
     tbody, thead, tfoot{
 
         th{
@@ -36,8 +41,14 @@
             font-weight: 600;
             color: $main;
         }
+    }  
+}
+
+
+
+.woocommerce td.product-name dl.variation {
+
+    p{
+        font-size: inherit;
     }
-
-
-    
 }

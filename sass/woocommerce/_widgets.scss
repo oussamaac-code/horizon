@@ -28,5 +28,15 @@
 
     button.wc-block-components-filter-submit-button {
         border-radius: 3px;
+        background-color: $main;
+
+        &:lang(ar){
+            
+            
+        }
     }
+
+}
+.rtl .wc-block-components-price-slider__range-input-progress{
+   background: linear-gradient(to left, transparent var(--low), black 0, black var(--high), transparent 0) no-repeat 0 100% / 100% 100% !important;
 }

@@ -20,7 +20,7 @@ section.woocommerce-customer-details{
 
             h2.woocommerce-column__title{
                 font-weight: 600;
-                font-size: 20px;
+                font-size: 19px;
                 color: $main;
             }
 
@@ -28,7 +28,10 @@ section.woocommerce-customer-details{
                 border: 1px solid #eaeaea;
                 border-radius: 0;
                 padding: 1.5rem;
-                line-height: 1.5;
+                line-height: 1.7;
+                font-size: 15px;
+
+                border-radius: 3px;
             }
 
         }

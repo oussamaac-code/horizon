@@ -3,14 +3,48 @@ a{
     font-size: inherit;
     text-decoration: none;
     transition: all .3s ease;
-        
 }
 
 p{
     color: $text;
+    color: rgb(86, 86, 86);
     font-size: 15px;
-    line-height: 1.7;
-
+    line-height: 1.95;
+    font-weight: 400;
 }
 
 
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+input[type='number'],
+input[type='password']
+{
+    height: 2.8rem;
+    padding: 0 15px;
+    border: 1px solid #ddd;
+    border-radius: 3.5px;
+
+    &:focus{
+        border:  1.5px solid $main;
+    }
+
+}
+
+textarea{
+    min-height: 8rem;
+    padding: 20px 18px;
+    border: 1px solid #ddd;
+    border-radius: 3.5px;
+    font-family: $inter;
+    font-size: 14px;
+
+    &:focus{
+        border:  1.5px solid $main;
+    }
+}
+
+label{
+    color: black;
+    font-size: 13.7px;
+}

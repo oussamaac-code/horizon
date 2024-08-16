@@ -73,3 +73,13 @@
     </div>
 
 </header>
+
+
+<?php 
+
+get_template_part('templates/parts/site', 'loader');
+
+
+if ( function_exists( '_depot_login_form' ) ) {
+    _depot_login_form();
+}

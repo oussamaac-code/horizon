@@ -1,9 +1,9 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
-const browserSync = require('browser-sync').create()
-const concat = require('gulp-concat')
+const browserSync = require('browser-sync').create();
+const concat = require('gulp-concat');
 const minify = require('gulp-minify');
-
+const zip = require('gulp-zip');
 
 
 function style(){
@@ -27,12 +27,20 @@ function style_admin(){
 }
 
 
+gulp.task('compress', function(){
+    
+    return gulp.src(['./**/*.*', '!node_modules/**/*.*'])
+    .pipe(zip('osmstore.zip'))
+    .pipe(gulp.dest('.'))
+})
+
+
 function watch(){
 
     browserSync.init({
-        proxy: 'http://horizon.local/',
+        proxy: 'http://oussamastore.local/',
 
-      })
+    })
 
     gulp.watch('./sass/**/*.scss', style)
     gulp.watch('./core/admin/sass/**/*.scss', style_admin)

@@ -71,8 +71,19 @@ function cart_page_heading_section(){
         </div>
     </section>
     <?php
-}
+};
 
+
+//add_action('woocommerce_after_cart_item_name', 'add_price_to_product_name');
+
+add_action('woocommerce_after_cart_item_name', function( $cart_item, $cart_item_key){
+
+    $_product = wc_get_product( $cart_item['product_id'] );
+    echo '<div class="price">';
+    echo $_product->get_price_html();
+    echo '</div>';
+    
+}, 0, 2);
 
 add_action( 'woocommerce_before_cart' , function(){ echo '<div class="container cart-all-wrapper" >'; }, 1 );
 add_action( 'woocommerce_after_cart' , function(){ echo '</div>'; } );
@@ -108,11 +119,60 @@ remove_action( 'woocommerce_after_shop_loop_item_title' , 'woocommerce_template_
 
 // (WOOCOMMERCE) currency to DH
 
-//add_filter('woocommerce_currency_symbol', 'change_existing_currency_symbol', 10, 2);
+add_filter('woocommerce_currency_symbol', 'change_existing_currency_symbol', 10, 2);
 
 function change_existing_currency_symbol( $currency_symbol, $currency ) {
     switch( $currency ) {
         case 'MAD': $currency_symbol = 'Dh'; break;
     }
     return $currency_symbol;
+}
+
+
+
+// ****** Woocommerce Quantity ******
+
+add_action('woocommerce_before_quantity_input_field', function(){
+    ;?>
+        <button type="button" class="minus"><i class="ri-subtract-line"></i></button>
+    <?php
+}); 
+
+add_action('woocommerce_after_quantity_input_field', function(){
+    ;?>
+        <button type="button" class="plus"><i class="ri-add-line"></i></button>
+    <?php
+}); 
+
+add_action( 'wp_footer', 'bbloomer_add_cart_quantity_plus_minus' );
+ 
+function bbloomer_add_cart_quantity_plus_minus() {
+    wc_enqueue_js(
+        "$(document).on( 'click', 'button.plus, button.minus', function() {
+
+            var qty = $( this ).parent( '.quantity' ).find( '.qty' );
+            var val = parseFloat(qty.val());
+            var max = parseFloat(qty.attr( 'max' ));
+            var min = parseFloat(qty.attr( 'min' ));
+            var step = parseFloat(qty.attr( 'step' ));
+            if ( $( this ).is( '.plus' ) ) {
+                
+                if( isNaN( val ) ) { 
+                    qty.val( step ).change();
+                } else { 
+                    if ( max && ( max <= val ) ) {
+                    qty.val( max ).change();
+                    } else {
+                    qty.val( val + step ).change();
+                    }
+                }
+            } else {
+                if ( min && ( min >= val ) ) {
+                qty.val( min ).change();
+                } else if ( val > 1 ) {
+                qty.val( val - step ).change();
+                }
+            }
+        });"
+    );
 }

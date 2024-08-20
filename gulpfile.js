@@ -29,9 +29,10 @@ function style_admin(){
 
 gulp.task('compress', function(){
     
-    return gulp.src(['./**/*.*', '!node_modules/**/*.*'])
-    .pipe(zip('osmstore.zip'))
+    return gulp.src(['./**/*.*', '!node_modules/**/*.*', '!asset/img/uploads/**/*.*', '!package-lock.json'])
+    .pipe(zip('oussamastore.zip'))
     .pipe(gulp.dest('.'))
+
 })
 
 

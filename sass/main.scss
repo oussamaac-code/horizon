@@ -85,6 +85,11 @@ img{
     display: none !important;
 }
 
+/* Loader
+--------------------------------------------- */
+@import "./components/loader";
+
+
 /* Components
 --------------------------------------------- */
 @import "./components/main";

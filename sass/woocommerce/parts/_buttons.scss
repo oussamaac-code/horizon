@@ -6,6 +6,8 @@
     font-weight: 500;
     color: white;
     background-color: $main;
+    border: 0;
+    font-size: 15px;
 
     &:hover{
         background-color: $main-darker;
@@ -25,6 +27,7 @@
     padding: 0 25px !important;
     transition: all .3s ease;
     height: 3.2rem;
+    border: 0;
 
     
 

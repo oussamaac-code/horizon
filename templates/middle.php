@@ -40,7 +40,7 @@ get_header();
                     <?php the_content();?>
                 </article>
 
-                <?php get_template_part('templates/parts/blog', 'newsletter'); ?>
+                <?php //get_template_part('templates/parts/blog', 'newsletter'); ?>
 
                 <?php comments_template() ;?>
             </div>

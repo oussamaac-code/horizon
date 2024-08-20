@@ -112,15 +112,17 @@ body.woocommerce.archive{
 
                 .filter-product-btn {
 
+                    font-size: 15.1px;
+
                     @media (max-width: 550px){
                         margin-bottom: 1rem;
                     }
 
                     &:lang(ar){
-                           position: relative;
-                           padding-right: 1.3rem;
+                        position: relative;
+                        padding-right: 1.5rem;
                             
-                        }
+                    }
 
                     a{
                         font-weight: 300;
@@ -129,27 +131,48 @@ body.woocommerce.archive{
                             text-decoration: underline;
                         }
                     }
+
                     i{
                         &:lang(ar){
-                                display: block;
-                                position: absolute;
-                                right: 0;
-                                bottom: 0;
-                                
-                            }
+                            display: block;
+                            position: absolute;
+                            right: 0;
+                            bottom: 2.5px;
+                            
+                        }
                     }
                 }
-                    
 
                 .woocommerce-result-count{
                     margin-bottom: 0;
-                    margin-left: 3rem;
+                    margin-left: 1rem;
+                    padding-left: 1.1rem;
+                    position: relative;
+
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 1.5px;
+                        height: 1rem;
+                        background-color: #d6d6d6;
+                    }
+
                     font-weight: 300;
                     color: black;
 
                     &:lang(ar){
                         margin-left: 0;
-                        margin-right: 5rem;
+                        padding-left: 0;
+                        margin-right: 1.4rem;
+                        padding-right: 1.1rem;
+
+                        &::before{
+                            left: auto;
+                            right: 0;
+                        }
                         
                     }
 

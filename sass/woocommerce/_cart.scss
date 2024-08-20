@@ -20,20 +20,24 @@ body.woocommerce-cart{
 
     section.heading-cart{
         position: relative;
-        color: white;
-        height: 18vw;
+        color: rgb(0, 0, 0);
+        height: 10vw;
         display: flex;
-        align-items: center;
+        align-items: end;
         overflow: hidden;
         margin-bottom: 2.2rem;
 
         @media (max-width: 800px){
-            height: 42vw;
+            height: 20vw;
         }
 
         @media (max-width: 550px){
-            height: 55vw;
+            height: 29vw;
             margin-bottom: 1.5rem;
+        }
+
+        .container{
+            margin: 0 auto 0rem;
         }
 
 
@@ -45,12 +49,14 @@ body.woocommerce-cart{
             height: 100%;
             z-index: -1;
             object-fit: cover;
+            display: none;
         }
 
         h1{
-            font-size: 55px;
+            font-size: 53px;
+            margin: 0 0 .5rem;
             @media (max-width: 550px){
-                font-size: 35px;
+                font-size: 45px;
             }
 
         }
@@ -72,7 +78,7 @@ body.woocommerce-cart{
         }
 
         >form{
-            width: 62%;
+            width: 62.5%;
             //width: 100%;
             margin-bottom: 1.7rem;
 
@@ -268,9 +274,9 @@ body.woocommerce-cart{
                         }
 
                         &.product-remove{
-                            width: 3rem;
+                            width: 2.3rem;
                             text-align: left;
-
+                            padding-left: 10px;
                             a{
                                 width: 1.2rem;
                                 height: 1.2rem;
@@ -294,7 +300,6 @@ body.woocommerce-cart{
                                     font-weight: 300;
                                     transition: all .3s ease;
                                     font-size: 17px;
-                                    
 
                                 }
 
@@ -402,21 +407,17 @@ body.woocommerce-cart{
                                     background-color: $main-darker;
                                     color: white;
                                 }
-
                             }
                         }
-
                     }
                 }
-
             }
-
         }
 
         .cart-collaterals{
             width: 34%;
             //width: 44%;
-            padding: 2.8rem;
+            padding: 2.3rem 2.2rem;
             margin-left: auto;
             background-color: #f8f8f8;
             border-radius: 10px;
@@ -443,9 +444,7 @@ body.woocommerce-cart{
 
                 td{
                     text-align: right;
-                    line-height: 1.7;
 
-                    
                 }
 
                 ul#shipping_method .amount{
@@ -459,7 +458,7 @@ body.woocommerce-cart{
                 td, th{
                     font-size: 14.7px;
                     padding: 22px 0;
-                    line-height: 1.9;
+                    line-height: 1.75;
 
                     @media (max-width:550px){
                         font-size: 14px;

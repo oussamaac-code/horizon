@@ -6,6 +6,27 @@
     margin-bottom: 0rem;
     background-color: #f8f8f8;
     border-radius: 5px;
+    position: relative;
+
+
+    &::after{
+        content: "\ea4e";
+        display: inline-block;
+        font-family: remixicon !important;
+        font-style: normal; 
+        padding-top: 14px;
+        position: absolute;
+        right: 8px;
+
+    }
+
+    &:lang(ar){
+
+        &::after{
+            right: auto;
+            left: 9px;
+        }
+    }
 
     @media (max-width: 550px){
         width: 100%;
@@ -16,7 +37,12 @@
         font-family: $inter;
         border: 0;
         padding: 0 9px 0 0;
-        background-color: transparent;
+        background-color: transparent !important;
+        font-size: 13px;
+
+        -moz-appearance: none; 
+        -webkit-appearance: none; 
+        appearance: none;
 
         @media (max-width: 550px){
             width: 100%;

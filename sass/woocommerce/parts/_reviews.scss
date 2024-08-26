@@ -203,8 +203,56 @@
 .woocommerce .woocommerce-Tabs-panel--additional_information{
 
     table.shop_attributes{
+        border-collapse: collapse;
+        border-top: 0;
         td{
             font-style: normal;
+            background-color: transparent !important;
+            border: 0;
+            color: black;
+            border-left: 1px solid #f0f0f0;
+            padding-left: 1.3rem;
+
+            &:lang(ar){
+                padding-right: 1.3rem;
+                padding-left: 0;
+                text-align: right;
+                border-right: 1px solid #f0f0f0;
+                border-left: 0;
+            }
+            p{
+                color: black;
+                font-weight: 400;
+            }
+        }
+
+        th{
+            text-align: left;
+            background-color: transparent !important;
+            border: 0 ;
+            font-size: 15.5px;
+            font-weight: 400;
+            color: black;
+            opacity: .6;
+            padding-left: 1.3rem;
+
+            &:lang(ar){
+                padding-right: 1.3rem;
+                padding-left: 0;
+                text-align: right;
+            }
+            
+        }
+
+        tr{
+            background-color: transparent !important;
+            border: 1px solid #f0f0f0 !important;
+            border-bottom: 0;
+            min-height: 3.2rem;
+
+            &:last-child{
+                border-bottom: 1px solid #f0f0f0;
+            }
         }
     }
 }

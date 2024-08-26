@@ -58,6 +58,10 @@ body{
     }
 }
 
+.admin-bar p.demo_store {
+    top: 0;
+}
+
 .container{
 
     width: 90%;
@@ -112,7 +116,7 @@ img{
 
 /* Widgets
 --------------------------------------------- */
-@import "./widgets/widgets";
+@import "./widgets/main";
 
 
 

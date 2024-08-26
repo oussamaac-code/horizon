@@ -21,15 +21,15 @@
         li{
             border: none;
             background-color: transparent ;
-            background-color: #f3f3f3;
-            margin-right: .8rem;
+            background-color: #f5f5f5;
+            margin-right: .6rem;
             border-radius: 0;
             margin-bottom: .8rem;
             line-height: 1.6;
 
             &:lang(ar){
                 margin-right: 0;
-                margin-left: .8rem;
+                margin-left: .6rem;
             }
             
             a{
@@ -52,7 +52,7 @@
             &.active{
                 border-bottom: 0;
                 background-color: $main;
-                background-color: #cbcbcb;
+                background-color: #d6d6d6;
                 color: rgb(0, 0, 0);
             }
         }

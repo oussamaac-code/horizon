@@ -107,7 +107,7 @@ body.woocommerce.single-product{
             }
 
             .woocommerce-product-details__short-description{
-                margin-bottom: 2rem;
+                margin-bottom: 1rem;
                 p{
                     font-weight: 300;
                     line-height: 1.99;
@@ -162,7 +162,7 @@ body.woocommerce.single-product{
             }
 
             form.cart{
-                margin-top: 2.2rem;
+                margin-top: 1rem;
                 flex-wrap: wrap;
 
                 table.group_table{
@@ -233,9 +233,24 @@ body.woocommerce.single-product{
                 .variations{
                     width: 100%;
 
+                    tr{
+                        &:has(td select#pa_taille),
+                        &:has(td select#pa_couleur){
+                           display: none;
+                        }
+                    }
+
+                    th, td{
+                        line-height: normal;
+                    }
+
                     th{
                         text-align: left;
                         font-weight: 500;
+                        width: 20%;
+                        vertical-align: middle;
+                    
+                      
 
                         &:lang(ar){
                             text-align: right;
@@ -243,19 +258,70 @@ body.woocommerce.single-product{
                         }
 
                         label{
-                            font-size: 17px;
-                            font-weight: 600;
+                            font-size: 16px;
+                            font-weight: 500;
                             line-height: 1;
+                            width: 100%;
+                            display: block;
+                            margin-bottom: 5px;
                         }
                     }
-                    td.value{
-                        display: none;
+
+                    td{
+
+                        position: relative;
+                        width: 100%;
+                        border: 1px solid #ddd;
+                        border-radius: 5px;
+
+                        .reset_variations{
+                           display: none !important;
+                        }
+
+
+                        &::after{
+                            content: "\ea4e";
+                            display: inline-block;
+                            font-family: remixicon !important;
+                            font-style: normal; 
+                            padding-top: 14px;
+                            position: absolute;
+                            right: 8px;
+                            top: 4px;
+                        }
+
+                        &:lang(ar){
+
+                            &::after{
+                                right: auto;
+                                left: 8px;
+                            }
+                        }
+
+                        select{
+                            width: 100%;
+                            padding: 0 13px ;
+                            height: 3rem;
+                            border: none;
+                            outline: none;
+                            -moz-appearance: none; 
+                            -webkit-appearance: none; 
+                            appearance: none;
+                            background-color: transparent !important;
+                        }
                     }
+                    
                 }
 
-                .horizon-bulk-variations{
-                    display: flex;
+                .horizon-bulk-taille-variations{
+                    
                     margin: 0rem 0 1.7rem;
+
+                    .label{
+                        margin-bottom: 1rem;
+                        font-weight: 500;
+                        font-size: 16px;
+                    }
 
                     button{
                         margin-right: .5rem;
@@ -264,14 +330,122 @@ body.woocommerce.single-product{
                         border: 0;
                         cursor: pointer;
                         border-radius: 3px;
+                        position: relative;
 
                         &.selected{
                             background-color: #111111;
                             color: white;
                         }
 
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%) rotate(45deg);
+                            height: 99%;
+                            width: 1.5px;
+                            background-color: rgb(22, 22, 22);
+                            display: none;
+
+                        }
+
+                        &.close{
+                            opacity: .5 !important;
+                            cursor: default !important;
+                            border: 2px solid #fff !important;
+
+                            &::before{
+                                display: block;
+                            }
+
+                        }
+
                     }
 
+                }
+
+                .horizon-bulk-couleur-variations{
+                    
+                    margin: 0rem 0 1.7rem;
+
+                    .label{
+                        display: block;
+                        margin-bottom: 1rem;
+                        font-weight: 500;
+                        font-size: 16px;
+                    }
+
+                    button{
+                        margin-right: .5rem;
+                        height: 35px;
+                        width: 35px;
+                        border: 0;
+                        box-shadow: 0 0 1px 1px #bcbcbc;
+                        transition: all .1s ease-in-out;
+                        border: 3.9px solid #fff;
+                        cursor: pointer;
+                        border-radius: 100px;
+                        position: relative;
+
+                        &.selected{
+                           
+                            border-color: #616161;
+                            border-color: #808080;
+                            box-shadow: none;
+                        }
+
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%) rotate(45deg);
+                            height: 90%;
+                            width: 1px;
+                            background-color: rgb(45, 45, 45);
+                            display: none;
+
+                        }
+
+                        &.close{
+                            opacity: .2 !important;
+                            cursor: default !important;
+                            border: 2px solid #fff !important;
+
+                            &::before{
+                                display: block;
+                            }
+
+                        }
+
+                    }
+
+                }
+
+                .clear-attribute-producto{
+                    margin-bottom: 1.3rem;
+                    a{
+                        visibility: visible;
+                        transition: all .3s ease;
+                        color: crimson;
+                        display: block;
+
+                        &:hover{
+
+                            i{
+                                transform: rotate(90deg);
+                              
+                            }
+                        }
+
+                        i{
+                            font-size: 16px;
+                            transition: all .3s ease;
+                            transform: rotate(0deg);
+                            display: inline-block;
+                        }
+                    }
                 }
 
                 div.quantity{

@@ -119,7 +119,7 @@ remove_action( 'woocommerce_after_shop_loop_item_title' , 'woocommerce_template_
 
 // (WOOCOMMERCE) currency to DH
 
-add_filter('woocommerce_currency_symbol', 'change_existing_currency_symbol', 10, 2);
+//add_filter('woocommerce_currency_symbol', 'change_existing_currency_symbol', 10, 2);
 
 function change_existing_currency_symbol( $currency_symbol, $currency ) {
     switch( $currency ) {
@@ -175,4 +175,24 @@ function bbloomer_add_cart_quantity_plus_minus() {
             }
         });"
     );
+}
+
+/**
+ * 
+ * remove checkout fields (Checkout)
+ */
+
+add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
+
+function custom_override_checkout_fields( $fields ) {
+
+    //  unset($fields['billing']['order_comments']);
+    //  unset($fields['billing']['billing_company']);
+    //  unset($fields['billing']['billing_postcode']);
+    //  unset($fields['billing']['billing_state']);
+    //  unset($fields['order']['order_comments']);
+    //  unset($fields['billing']['billing_email']);
+    //unset($fields['billing']['billing_country']);
+
+    return $fields;
 }

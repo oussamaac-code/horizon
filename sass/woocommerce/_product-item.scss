@@ -4,9 +4,14 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 1.8rem 1.5rem;
 
+    @media (max-width:850px){
+        gap: 1.15rem 1.2rem;
+        grid-template-columns: 1fr 1fr;
+    }
+
     @media (max-width:550px){
         gap: 1.15rem 1.2rem;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr ;
     }
 
     &::before{
@@ -23,11 +28,19 @@
     
             .img{
 
-                opacity: .7;
+                //opacity: .7;
+
+                img{
+                    transform: scale(1.12);
+                }
             }
 
             a.button, a.added_to_cart{
                 right: 14px;
+            }
+
+            .woocommerce-loop-product__title{
+                //text-decoration: underline;
             }
         }
     
@@ -40,7 +53,7 @@
 
 
             @media (min-width: 1000px){
-                max-height: 300px;
+                max-height: 270px;
             }
             @media (max-width:900px){
                 height: 40vw;
@@ -74,25 +87,37 @@
     
         .woocommerce-loop-product__title{
             font-weight: 500;
-            font-size: 16px !important;
+            font-size: 16.2px !important;
             line-height: 1.8;
             margin-bottom: .4rem;
             transition: all .3s ease;
             margin-top: .25rem;
 
-            @media (max-width:550px){
+            &:lang(ar){
                 font-size: 17px !important;
+                font-weight: 600;
+            }
+
+            @media (max-width:550px){
+                font-size: 16px !important;
+
+                &:lang(ar){
+                    font-size: 18px !important;
+                    font-weight: 700;
+                }
             }
 
         }
     
         .price{
-            font-size: 14.5px;
-            font-weight: 400;
+            font-size: 14.8px;
+            font-weight: 500;
             color: rgb(69, 69, 69);
+            color: #169543;
+            color: #2e45fd;
 
             @media (max-width:550px){
-                font-size: 13px;
+                font-size: 14px;
             }
 
             ins{
@@ -103,7 +128,7 @@
     
         a.button{
             position: absolute;
-            top: calc(20.5vw - 60px);
+            top: calc(270px - 60px);
             right: 14px;
             right: -50px;
             transition: all .3s ease;
@@ -167,7 +192,7 @@
 
         a.added_to_cart{
             position: absolute;
-            top: calc(20.5vw - 60px);
+            top: calc(270px - 60px);
             right: 14px;
             right: -50px;
             transition: all .3s ease;
@@ -222,11 +247,7 @@
 
         &.outofstock{
             &:hover{
-    
-                .img{
-    
-                    opacity: .7;
-                }
+
     
                 a.button, a.added_to_cart{
                     right: 14px;
@@ -234,7 +255,7 @@
             }
             a.button{
                 position: absolute;
-                top: calc(20.5vw - 60px);
+                top: calc(270px - 60px);
                 right: 14px;
                 right: -50px;
                 transition: all .3s ease;
@@ -296,11 +317,7 @@
 
         &.product-type-variable{
             &:hover{
-    
-                .img{
-    
-                    opacity: .7;
-                }
+
     
                 a.button, a.added_to_cart{
                     right: 14px;
@@ -308,7 +325,7 @@
             }
             a.button{
                 position: absolute;
-                top: calc(20.5vw - 60px);
+                top: calc(270px - 60px);
                 right: 14px;
                 right: -50px;
                 transition: all .3s ease;
@@ -371,18 +388,13 @@
         &.product-type-grouped{
             &:hover{
     
-                .img{
-    
-                    opacity: .7;
-                }
-    
                 a.button, a.added_to_cart{
                     right: 14px;
                 }
             }
             a.button{
                 position: absolute;
-                top: calc(20.5vw - 60px);
+                top: calc(270px - 60px);
                 right: 14px;
                 right: -50px;
                 transition: all .3s ease;

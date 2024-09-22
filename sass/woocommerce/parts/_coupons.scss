@@ -3,29 +3,38 @@
 .woocommerce-page table.cart td.actions .coupon {
 
     display: flex;
-    flex-wrap: wrap;
     input.input-text, button{
         height: 3.2rem;
     }
 
     input.input-text{
-        min-width: 10rem;
-        padding: 0 14px;
+        min-width: 12.5rem;
+        padding: 0 15px;
         font-family: $inter;
         border: 1px solid #ddd;
-        margin-right: 8px;
+        margin-right: 0px;
         margin-bottom: 1rem;
+        border-right: 0;
+        border-radius: 0;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
 
         &:lang(ar){
                         
             margin-right: 0;
+            margin-left: 0 !important;
             margin-left: 8px;
+            border-right: 1px solid #ddd;
+            border-left: 0;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
         }
 
         @media (max-width: 550px){
             margin-right: 0;
-            margin-top: 1rem;
-            width: 100%;
+            margin-top: 0rem;
 
         }
     }
@@ -36,20 +45,33 @@
         font-weight: 400;
         padding: 0 25px;
         transition: all .3s ease;
+        overflow: hidden !important;
+        text-wrap: nowrap !important;
+        width: 20px !important;
+        border-radius: 0;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+
 
         &::before{
-            content: "\f20d";
+            content: "\f20b";
             font-family: remixicon !important;
             font-style: normal;
-            margin-right: 12px;
+            margin-right: 32px;
+            margin-left: -8px;
             font-size: 17px;
         }
 
         &:lang(ar){
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
             &::before{
 
-                margin-right: 0;
-                margin-left: 12px;
+                margin-right: -8px;
+                margin-left: 32px;
+
             }
         }
 

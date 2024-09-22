@@ -35,7 +35,7 @@ body.woocommerce-checkout{
             }
 
             #customer_details{
-                width: 48%;
+                width: 50%;
 
                 @media (max-width:900px){
                     width: 100%;
@@ -43,13 +43,36 @@ body.woocommerce-checkout{
 
                 >div{
                     width: 100%;
+                    margin-bottom: 1.5rem;
+
+                    .form-row-first, 
+                    .form-row-last {
+                        width: 48.5% !important;
+                    }
+                }
+
+                .col-1{
+                    .woocommerce-billing-fields{
+
+                        > h3{
+                            display: none;
+                        }
+
+                        #billing_address_2_field{
+                            display: none  !important;
+                        }
+                    }
+                }
+
+                .col-2{
+                    display: none;
                 }
             }
 
             div.right-checkout-container{
-                width: 43%;
+                width: 41%;
                 padding: 2.8rem ;
-                background-color: #F9F9F9;
+                background-color: #f9f9f9d6;
                 border-radius: 3px;
 
                 @media (max-width:900px){
@@ -81,12 +104,17 @@ body.woocommerce-checkout{
 
                         li{
                             margin: 10px 0;
+
+                            label{
+                                font-size: 15.5px;
+                                font-weight: 500;
+                            }
                         }
                     }
 
                     div.payment_box{
                         background-color: white;
-                        padding: 1.4rem;
+                        padding: 1.3rem;
 
                         &::before{
                             border: 1em solid white;
@@ -96,8 +124,8 @@ body.woocommerce-checkout{
                         }
                         p{
                             margin-top: 0;
-                            line-height: 1.88;
-                            font-size: 14.5px;
+                            line-height: 1.7;
+                            font-size: 14px;
                         }
                     }
 

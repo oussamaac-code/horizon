@@ -1,0 +1,204 @@
+header{
+
+    &#main-header{
+
+
+        .container{
+            display: flex;
+            align-items: center;
+            height: 90px;
+            
+            ul{
+                margin-left: 0;
+                padding-left: 0;
+                li{
+                    list-style: none;
+                }
+            }
+
+
+            .logo{
+                a{
+                    display: block;
+                    width: 8rem;
+                }
+            }
+
+            nav{
+                margin-left: 2rem;
+                font-size: 15px;
+                ul.menu{
+                    display: flex;
+                    align-items: center;
+
+                    li{
+                        margin-right: 2rem;
+                    }
+                }
+            }
+
+            .end{
+                margin-left: auto;
+                display: flex;
+                align-items: center;
+
+                > div{
+                    margin-left: 1.5rem;
+                }
+
+                .mini-cart{
+    
+                    height: 100%;
+    
+    
+                    @media (max-width:550px){
+                        margin-left: auto;
+                        margin-right: 7px;
+
+                        &:lang(ar){
+
+                        margin-right: auto;
+                        
+                    }
+                    }
+
+    
+                    &:hover{
+                        >ul >li:last-child{
+                            opacity: 1;
+                            visibility: visible;
+                            transform: translateY(0);
+                        }
+                    }
+                    >ul{
+                        margin: 0;
+                        padding: 0;
+                        position: relative;
+                        height: 100%;
+    
+                        >li:last-child{
+    
+                            @media (max-width:800px){
+                                position: fixed;
+                                top: 0;
+                                bottom: 0;
+                                height: 100vh;
+                                right: -550px; 
+                                width: 100vw;
+                                max-width: 540px;
+                                z-index: 10;
+                                opacity: 1;
+                                visibility: visible;
+                                transform: translateY(0);
+                                display: flex;
+                                flex-direction: column;
+                                overflow-y: scroll;
+                                transition: all .48s ease-in-out;
+                                transition: all .28s linear;
+
+                                &.show{
+                                    right: 0;
+                                }
+
+                                a.close{
+                                    display: block !important;
+                                    text-align: right;
+                                    margin: .2rem 0 1.5rem;
+                                    font-weight: 600;
+                                    color: black;
+                                    font-size: 14px;
+
+                                    &:hover{
+                                        color: $main;
+                                    }
+                                }
+
+                            }
+    
+                            position: absolute;
+                            z-index: 50;
+                            top: 90%;
+                            right: -2rem ;
+                            background-color: white;
+                            padding: 1.4rem;
+                            border: 1px solid #eaeaea;
+                            min-width: 19.5rem;
+                            transform: translateY(10px);
+                            opacity: 0;
+                            visibility: hidden;
+                            transition: all .3s ease;
+                            box-shadow: 0 0 60px 0 rgba(0, 0, 0, .07);
+                            border-top: 4px solid $main;
+                            color: $text;
+                            padding-top: 1.6rem;
+                            border-radius: 3px;
+
+                            &:lang(ar){
+                                
+                                right: auto;
+                                left: -2rem;
+                                @media (max-width:800px){
+                                   
+                                    right: auto;
+                                    left: -550px;
+
+                                    &.show{
+                                        left: 0;
+                                    }
+
+                                }
+                                
+                            }
+
+                            a.close{
+                                display: none;
+                            }
+    
+                            p.woocommerce-mini-cart__empty-message{
+                                text-align: center;
+                            }
+                        }
+    
+                        >li:first-child{
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                        }
+    
+                        a.cart-contents{
+                            font-size: 22px;
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                           
+    
+                            .count{
+                                position: absolute;
+                                background-color: black;
+                                font-size: 11px;
+                                padding: 1.5px 3.5px;
+                                color: white;
+                                top: -4px;
+                                right: -6px;
+                                border-radius: 100px;
+
+                                &:lang(ar){
+                                    padding: 0px 6px;
+                                    font-size: 12.5px;
+                                    right: -12px;
+                                }
+    
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .mobile-menu{
+                display: none;
+            }
+
+        }
+    }
+}

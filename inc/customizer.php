@@ -21,7 +21,7 @@ function horizon_customize_register( $wp_customize ) {
     ) );
     $wp_customize->add_setting('horizon_theme_main_darker_color', array(
         'default' => '#054bbb',
-        'transport' => 'postMessage'
+        'transport' => 'refresh'
     ) );
 
     $wp_customize->add_section('horizon_standard_colors', array(

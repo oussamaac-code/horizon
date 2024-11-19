@@ -40,6 +40,17 @@
 
                     jQuery(document).ready(function($) {  
 
+                        // **  Search Open/Close events  **
+
+                        $('header#main-header .search>a').click(function(e){
+                            e.preventDefault();
+                            $('header#main-header .search-container').removeClass('close')
+                        })
+
+                        $('header#main-header .search .content .close').click(function(){
+                            $('header#main-header .search .search-container').addClass('close')
+                        })
+
                         // **  Login Register froms  **
    
                         var searchForm= $('.search-container .search-form input');

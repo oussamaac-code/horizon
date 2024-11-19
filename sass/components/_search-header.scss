@@ -1,0 +1,150 @@
+.search-container{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.90);
+    padding: 4.5rem 0 0;
+    z-index: 15;
+    color: white;
+    opacity: 1;
+    visibility: visible;
+    transition: all .25s ease;
+    overflow-y: scroll;
+  
+
+
+    &.close{
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .content{
+        max-width: 600px;
+        margin: auto;
+        width: 80%;
+        height: 100%;
+
+        >h4{
+           
+            font-weight: 500;
+            font-size: 28px;
+            margin-bottom: 2.7rem;
+            line-height: 1.6;
+
+            @media (max-width:550px){
+                font-size: 22px;
+                margin-bottom: 2rem;
+            }
+        }
+
+        .close{
+            position: absolute;
+            top: 1.5rem; right: 1.5rem;
+            font-size: 1.3rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all .3s ease;
+
+            &:hover{
+                color: $main;
+                
+            }
+        }
+
+        .search-form{
+            
+            form{
+                display: flex;
+                border-radius: 4px;
+                overflow: hidden;
+
+                input{
+                    flex-grow: 1;
+                    outline: none;
+                    border: none;
+                    height: 2.7rem;
+                    padding: 0 13px;
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                    margin: 0;
+                    font-size: 13.2px;
+                }
+                button{
+                    border: 0;
+                    width: 3rem;
+                    transition: all .3s ease;
+                    cursor: pointer;
+                    font-size: 18px;
+                    font-weight: 700;
+                    height: 2.7rem;
+                    background-color: #ddd;
+
+                    &:hover{
+                        background-color: $main ;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .search-result{
+            margin: 2rem 0;
+            .search-card{
+                margin: 1rem 0;
+                padding-bottom: 1rem;
+                border-bottom: 1px solid #ffffff21;
+                .search-content a{
+                    padding-left: 90px;
+                    position: relative;
+                    display: block;
+                    min-height: 70px;
+
+                    &:hover{
+
+                        h5{
+                            color: $main;
+                        }
+                    }
+
+                    .img{
+
+                        height: 70px;
+                        width: 70px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        img{
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .info{
+
+                        h5{
+                            font-weight: 400;
+                            font-size: 15px;
+                            line-height: 1.4;
+                            margin-bottom: .6rem;
+                            transition: all .2s ease;
+                        }
+
+                        time, .price{
+                            display: block;
+                            margin-top: 0rem;
+                            font-size: 13.5px;
+                            font-weight: 400;
+                            color: #bbbbbb;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+}

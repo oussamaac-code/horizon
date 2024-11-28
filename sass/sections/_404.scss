@@ -1,0 +1,48 @@
+section.page-notfound{
+
+    min-height: 70vh;
+    height: 80vh;
+    .container{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        padding: 1rem 0;
+
+        h1{
+            font-size: 130px;
+            color: $main-text;
+            margin: 0rem 0 1rem;
+
+        }
+
+        p{
+            margin-top: 0;
+            font-size: 16px;
+            margin-bottom: 1.5rem;
+            opacity: .8;
+        }
+
+        .cta{
+            text-align: center;
+            margin-bottom: 1.5rem;
+            
+
+            a{
+                padding: 1rem 1.6rem;
+                color: $main-darker;
+                border: 1px solid $main-darker;
+                display: inline-block;
+                font-size: 14px;
+
+                &:hover{
+                    background-color: $main;
+                    color: white;
+                    border: 1px solid $main;
+                }
+            }
+        }
+    }
+}

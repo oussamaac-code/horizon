@@ -1,31 +1,54 @@
-<?php 
+<?php
 /**
- * The template for displaying search results pages
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
- *
+ * 
+ * Front Page Template
+ * 
+ * This page is for displaying main Home page.
+ * 
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ * 
  * @package Horizon
  */
 
 get_header();
 ?>
 
-<main>
+    <main>
+        <section class="author">
+            <div class="container">
 
-    <section class="archive">
-        <div class="container">
+                <div class="contents">
 
-            <div class="contents">
+                    <div class="prsn-informations">
+                        <div class="avatar">
+                            <?php echo get_avatar( get_the_author_meta( 'ID' ), 250 ); ?>
+                        </div>
 
-                <?php  if( !have_posts() ): ?>
+                        <h4 class="author_name"> <?php echo get_author_name(); ?> </h4>
 
-                    <div class="no-results">
-                        <h4><?php _e('No results', 'texdomain'); ?></h4>
-                        <p><?php _e("We're sorry, but your search", 'texdomain'); echo '<b> "'.get_search_query().'"</b> '; _e("did not match", 'texdomain');  ?> </p>
-                        <?php get_search_form(); ?>
+                        <p class="author_bio"><?php echo get_the_author_description(); ?></p>
+
+                        <div class="meta">
+                            <div class="count"> <span><?php echo count_user_posts( get_the_author_ID() ) ;?></span> <?php _e('Articales Published', 'textdomain'); ?></div>
+                            <?php if( get_field('instagram', 'user_'.get_the_author_ID().'' ) || get_field('facebook', 'user_'.get_the_author_ID().'' )  || get_field('twitter', 'user_'.get_the_author_ID().'' ) ) : ;?>
+                                <div class="social-media">
+                                    <span><?php _e('Follow', 'textdomain'); ?></span>
+                                    <ul>
+                                        <?php if(  get_field('instagram', 'user_'.get_the_author_ID().'' ) ) : ;?>
+                                            <li><a target="blank" href="<?php echo get_field('instagram', 'user_'.get_the_author_ID().'' ); ?>"> <i class="ri-instagram-line"></i> </a></li>
+                                        <?php endif; ?>
+                                        <?php if(  get_field('facebook', 'user_'.get_the_author_ID().'' ) ) : ;?>
+                                            <li><a target="blank" href="<?php echo get_field('facebook', 'user_'.get_the_author_ID().'' ); ?>"> <i class="ri-facebook-fill"></i>  </a></li>
+                                        <?php endif; ?>
+                                        <?php if(  get_field('twitter', 'user_'.get_the_author_ID().'' ) ) : ;?>
+                                            <li><a target="blank" href="<?php echo get_field('twitter', 'user_'.get_the_author_ID().'' ); ?>"> <i class="ri-twitter-x-line"></i> </a></li>
+                                        <?php endif; ?>
+                                    </ul>
+                                </div>
+                            <?php endif; ?>
+                        </div>
                     </div>
-                <?php else: ;?>   
-                
+
                     <div class="articles">
                         <?php 
                             $template= get_theme_mod('horizon_theme_author_template1');
@@ -120,7 +143,7 @@ get_header();
                                                     </div>
                                                 </div>
 
-                                                <?php endwhile; else: endif;  wp_reset_query();?>
+                                            <?php endwhile; else: endif;  wp_reset_query();?>
                                         </div>
 
                                         <!-- pagination -->
@@ -171,7 +194,7 @@ get_header();
                                                     </div>
                                                 </div>
 
-                                                <?php endwhile; else: endif;  wp_reset_query();?>
+                                            <?php endwhile; else: endif;  wp_reset_query();?>
                                         </div>
 
                                         <!-- pagination -->
@@ -222,7 +245,7 @@ get_header();
                                                     </div>
                                                 </div>
                 
-                                                <?php endwhile; else: endif;  wp_reset_query();?>
+                                            <?php endwhile; else: endif;  wp_reset_query();?>
                                         </div>
 
                                         <!-- pagination -->
@@ -275,7 +298,7 @@ get_header();
                                                     </div>
                                                 </div>
 
-                                                <?php endwhile; else: endif;  wp_reset_query();?>
+                                            <?php endwhile; else: endif;  wp_reset_query();?>
                                         </div>
 
                                         <!-- pagination -->
@@ -298,23 +321,19 @@ get_header();
                             }
                         ;?>
                     </div>
+                </div>
 
-                <?php endif;?>
-                
+                <aside>
+                    <?php if(is_active_sidebar('blog-sidebar')): ?>
+
+                        <?php dynamic_sidebar('blog-sidebar') ;?>
+
+                    <?php  endif; ?>
+                </aside>
+
             </div>
-
-            <aside>
-                <?php if(is_active_sidebar('blog-sidebar')): ?>
-
-                    <?php dynamic_sidebar('blog-sidebar') ;?>
-
-                <?php  endif; ?>
-            </aside>
-
-        </div>
-    </section>
-
-</main>
+        </section>
+    </main>
 
 <?php  
 get_footer();

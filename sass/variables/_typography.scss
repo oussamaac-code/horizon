@@ -1,22 +1,154 @@
+// ** HEADING **
+h1, h2, h3, h4, h5, h6{
+    font-weight: 600;
+    line-height: 1.65;
+}
+h1{
+    font-size: 37px;
+    margin: 25px 0;
+}
+h2{
+    font-size: 29px;
+}
+h3{
+    font-size: 26px;
+}
+h4{
+    font-size: 23px;
+    margin: 25px 0;
+}
+h5{
+    font-size: 20px;
+    margin: 25px 0;
+}
+h6{
+    font-size: 18px;
+    margin: 25px 0;
+}
+
+// ** Seperator **
+hr,
+hr.wp-block-separator{
+    border-top: 1px solid ;
+    margin: 1.5rem 0;
+}
+
+// ** Mark **
+mark{
+    padding: 1.5px .2em;
+}
+
+// ** Drop cap **
+p.has-drop-cap:not(:focus):first-letter {
+    float: left;
+    font-size: 4.7em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: .68;
+    margin: .05em .1em 0 0;
+    text-transform: uppercase;
+    color: black;
+}
+
+// ** TAbles **
+.wp-block-table , table {
+
+    th, td{
+        border: 0;
+        padding: 1.35rem .5rem;
+        font-size: 15.5px;
+    }
+
+
+    th{
+        font-weight: 500;
+        font-size: 16px;
+    }
+    td{
+        color: #636363;
+    }
+
+    thead{
+        border-bottom: 0;
+        background-color: $main-text;
+        color: white;
+    }
+
+    tbody{
+        text-align: center;
+
+        tr:nth-child(even) {
+            background-color: #f7f7f7;
+        }
+
+    }
+}
+
+// ** Block Quotes **
+blockquote{
+
+    margin: 2rem 0;
+    padding-left: 55px;
+    position: relative;
+
+    &::before{
+        content: "\ec51";
+        font-family: remixicon !important;
+        font-style: normal;
+        position: absolute;
+        z-index: 1;
+        top: 3px;
+        left: 1px;
+        display: block;
+        font-size: 2rem;
+        color: crimson;
+    }
+
+    p{
+        font-size: 17.2px;
+        line-height: 2.05;
+        color: black;
+    }
+
+    cite{
+        font-style: normal;
+        text-transform: capitalize;
+        font-size: 13.7px;
+        font-weight: 500;
+        margin-top: 1.3rem;
+    }
+}
+
+// ** Lists **
+ol, ul{
+    
+    li{
+
+        font-size: 15.8px;
+        padding: 7.7px 0;
+    }
+}
+
+// ** Anchor Tag **
 a{
     color: inherit;
     font-size: inherit;
     text-decoration: none;
     transition: all .3s ease;
-        
+    line-height: 1.55;    
 }
 
+// ** Paragraph **
 p{
     color: $text;
     color: rgb(70, 70, 70);
-    font-size: 15.1px;
-    line-height: 2.05;
+    font-size: 15.5px ;
+    line-height: 2.08;
     font-weight: 400;
-
 
 }
 
-
+// ** Inputs **
 input[type='text'],
 input[type='email'],
 input[type='tel'],
@@ -27,6 +159,7 @@ input[type='password']
     padding: 0 15px;
     border: 1px solid #ddd;
     border-radius: 3.5px;
+    outline: none;
 
     &:focus{
         border:  1.5px solid $main;
@@ -41,6 +174,7 @@ textarea{
     border-radius: 3.5px;
     font-family: $inter;
     font-size: 14px;
+    outline: none;
 
     &:focus{
         border:  1.5px solid $main;

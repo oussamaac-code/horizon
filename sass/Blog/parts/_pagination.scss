@@ -1,7 +1,6 @@
 // For Blog
 .pagination-nav-links{
     display: flex;
-    justify-content: center;
     margin-top: 2.5rem;
 
     span,
@@ -15,17 +14,15 @@
         margin-right: 6px;
         color: $grey;
         display: block;
-        border-radius: 5px;
+        border-radius: 0px;
         font-size: 13.5px;
         
         &:hover{
             border-color: $main;
             background-color: $main;
             color: white;
-
             
         }
-
         
     }
 

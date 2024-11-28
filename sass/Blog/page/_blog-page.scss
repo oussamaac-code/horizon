@@ -1,0 +1,106 @@
+section.blog-page.template1,
+section.blog-page.template2
+{
+
+    margin: 5rem 0;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .content-wrap{
+            width: 64%;
+
+            @media (max-width:1100px){
+                width: 100%;
+                margin-bottom: 3.5rem;
+            }
+        }
+
+        aside{
+            width: 31%;
+            @media (max-width:1100px){
+                width: 100%;
+            }
+        }
+    }
+
+}
+
+// ** BLOG TEMPLATE 3 **
+
+section.blog-page.template3,
+section.blog-page.template5
+{
+
+    margin: 4rem 0;
+    .container{
+
+        .content-wrap{
+            width: 100%;
+            
+            .content{
+                
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: auto;
+                gap: 1.4rem;
+
+                @media (max-width:1100px){
+                    grid-template-columns: 1fr 1fr;
+                }
+                @media (max-width:750px){
+                    grid-template-columns: 1fr ;
+                }
+               
+            }
+
+        }
+    }
+
+}
+
+// ** BLOG TEMPLATE 4 **
+
+section.blog-page.template4,
+section.blog-page.template6
+{
+
+    margin: 5rem 0;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .content-wrap{
+            width: 65%;
+
+            @media (max-width:1100px){
+                width: 100%;
+                margin-bottom: 3.5rem;
+            }
+            .content{
+                
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto;
+                gap: 1.5rem;
+
+                @media (max-width:700px){
+                    grid-template-columns: 1fr ;
+                }
+               
+            }
+
+        }
+
+        aside{
+            width: 31%;
+
+            @media (max-width:1100px){
+                width: 100%;
+            }
+        }
+    }
+
+}

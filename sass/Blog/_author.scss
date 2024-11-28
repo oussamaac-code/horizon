@@ -1,0 +1,106 @@
+section.author{
+    margin: 4rem 0;
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .contents{
+            width: 64%;
+
+            @media (max-width: 1000px){
+                width: 100%;
+            }
+
+            .prsn-informations{
+                text-align: center;
+                list-style: none;
+                padding-bottom: 1rem;
+
+                h4{
+                    font-size: 22px;
+                    font-weight: 600;
+                }
+
+                >p{
+                    color: #7a7a7a;
+                }
+
+                .meta{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    margin: 2rem 0;
+
+                    .social-media{
+                        display: flex;
+                        align-items: center;
+                        margin-left: 1rem ;
+                        padding-left: 1rem;
+                        border-left: 2px solid #111;
+
+                        ul{
+                            list-style: none;
+                            display: flex;
+                            margin: 0;
+                            padding-left: 1rem ;
+                            li{
+                                margin-right: .7rem;
+                                font-size: 16px;
+
+                                a{
+                                    &:hover{
+                                        color: $main;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
+            
+            .articles{
+                margin: 3.5rem 0 0;
+            }
+        }
+
+        aside{
+            width: 32%;
+            @media (max-width: 1000px){
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+// ** AUTHOR TEMPLATE 3 & 4 **
+
+section.author{
+    .content-wrap3,
+    .content-wrap4
+    {
+        width: 100%;
+        
+        .content{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            gap: 1.4rem;
+
+            @media (max-width:1100px){
+                grid-template-columns: 1fr 1fr;
+            }
+            @media (max-width:750px){
+                grid-template-columns: 1fr ;
+            }
+           
+        }
+
+    }
+}
+

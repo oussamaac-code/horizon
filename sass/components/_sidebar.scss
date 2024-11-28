@@ -1,0 +1,33 @@
+aside{
+
+    list-style: none;
+    
+    h2.wp-block-heading{
+        font-size: 17px;
+        text-transform: uppercase;
+        margin-bottom: 2.9rem;
+        text-align: center;
+        font-weight: 600;
+        position: relative;
+        margin-top: 0;
+
+        &::after{
+            content: "\eb99 \eb99 \eb99";
+            font-family: remixicon !important;
+            font-style: normal;
+            margin-left: 1rem;
+            font-size: 15px;
+            color: $main;
+        }
+        &::before{
+            content: "\eb99 \eb99 \eb99";
+            font-family: remixicon !important;
+            font-style: normal;
+            margin-right: 1rem;
+            font-size: 15px;
+            color: $main;
+        }
+    }
+
+
+}

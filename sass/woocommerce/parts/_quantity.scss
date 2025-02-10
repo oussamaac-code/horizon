@@ -11,7 +11,7 @@
     
 
     &:hover{
-        border: 1px solid #5a5a5a;
+       border: 1px solid #797979;
     }
 
     button{
@@ -20,6 +20,13 @@
         outline: none;
         font-size: 15.5px;
         cursor: pointer;
+
+        &:first-child{
+            padding-right: 0;
+        }
+        &:last-child{
+            padding-left: 0;
+        }
         &:hover{
             color: $main;
         }
@@ -27,11 +34,12 @@
     }
 
     .qty{
-        min-width: 52px;
+        min-width: 51px;
         border: 0;
         outline: none;
         height: 100%;
         font-size: 14.5px;
+        width: 58px;
 
     }
     /* Chrome, Safari, Edge, Opera */

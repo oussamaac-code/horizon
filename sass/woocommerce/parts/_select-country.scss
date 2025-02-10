@@ -30,20 +30,22 @@
     padding: 12px;
 
     .select2-search__field{
-        height: 2.8rem;
+        height: 2.2rem;
         border: 1px solid #ddd !important;
         border-radius: 3.5px;
         padding: 0 15px;
+        padding-bottom: 0px;
     }
 }
 
 .select2-results{
     padding: 12px;
+    padding-top: 0px;
     ul{
 
         li{
-            height: 2.4rem;
-            line-height: 2.4rem;
+            min-height: 2.2rem;
+            line-height: 2.2rem;
             padding: 0 7px;
             font-size: 14px;
             outline: none;

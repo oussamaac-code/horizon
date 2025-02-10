@@ -30,7 +30,7 @@ function horizon_single_variation_template() {
 
                     if( !$('.woocommerce .clear-attribute-producto').length){
 
-                        $("<div class='clear-attribute-producto'> <a class='reset_variations' href='#'> <i class='ri-close-line'></i> Effacer </a>  </div>").insertBefore('.woocommerce form.cart .single_variation_wrap');
+                        $("<div class='clear-attribute-producto'> <a class='reset_variations' href='#'> <i class='ri-close-line'></i> Clear </a>  </div>").insertBefore('.woocommerce form.cart .single_variation_wrap');
 
                     }else{
                         if($(this).val()==''){

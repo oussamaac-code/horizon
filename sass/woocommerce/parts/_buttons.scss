@@ -8,10 +8,14 @@
     background-color: $main;
     border: 0;
     font-size: 15px;
+    padding: .8rem 1rem;
+    border: 1.5px solid #fdd123;
+    background-color: transparent;
+    color: black;
 
     &:hover{
-        background-color: $main-darker;
-        color: white;
+        background-color: #fdd123;
+        color: black;
     }
 
 }
@@ -26,7 +30,7 @@
     font-weight: 500;
     padding: 0 25px !important;
     transition: all .3s ease;
-    height: 3.2rem;
+    height: 3rem;
     border: 0;
 
     
@@ -50,16 +54,42 @@
     a.checkout-button{
         font-weight: 600;
         margin-bottom: 0;
-        padding: 1.1rem 1.2em;
-        font-size: 15px;
+        padding: 1rem 1.2em;
+        font-size: 16.5px;
         border-radius: 0;
         background-color: $main;
-        border-radius: 3px;
+        background-color: #fdd123;
+        border-radius: 0px;
+        color: #062637;
+        margin-top: 1rem;
+
 
         &:hover{
             background-color: $main-darker;
+            border: 1.5px solid $main-darker;
         }
     }
 }
 
+
+// Place Order
+
+body.woocommerce-checkout main form.checkout div.right-checkout-container #payment #place_order{
+    font-weight: 600;
+    margin-bottom: 0;
+    padding: 1.3rem 1.2em;
+    font-size: 16px;
+    border-radius: 0;
+    background-color: $main;
+    background-color: #fdd123;
+    border-radius: 0px;
+    color: #062637 !important;
+
+
+    &:hover{
+        background-color: $main;
+        color: white !important;
+        border: 1.5px solid $main;
+    }
+}
 

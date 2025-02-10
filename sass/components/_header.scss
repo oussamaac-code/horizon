@@ -46,6 +46,27 @@ header{
                     margin-left: 1.5rem;
                 }
 
+                .search {
+                    >a {
+                        font-size: 21px;
+
+                        &:hover{
+                            color: white;
+                        }
+                    }
+                }
+
+                .login-header{
+                    .top.user-logout{
+                        >a {
+                            font-size: 21px;
+                            &:hover{
+                                color: white;
+                            }
+                        }
+                    }
+                }
+
                 .mini-cart{
     
                     height: 100%;
@@ -70,6 +91,7 @@ header{
                             transform: translateY(0);
                         }
                     }
+
                     >ul{
                         margin: 0;
                         padding: 0;
@@ -166,7 +188,7 @@ header{
                         }
     
                         a.cart-contents{
-                            font-size: 22px;
+                            font-size: 21px;
                             position: relative;
                             display: flex;
                             align-items: center;
@@ -190,6 +212,22 @@ header{
     
                             }
                         }
+                    }
+                }
+
+                .burger-menu{
+
+                    display: none;
+
+                    a{
+                        font-size: 21px;
+                        &:hover{
+                            color: white;
+                        }
+                    }
+
+                    @media (max-width: 920px){
+                        display: block;
                     }
                 }
 

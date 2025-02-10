@@ -3,9 +3,25 @@
     padding: 0;
     margin: 2rem 0;
 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
     li{
+        margin-bottom: 1rem;
+        border-right: 0;
+        background-color: white;
+        padding: 1rem 2rem;
+
+        @media (max-width: 800px){
+            width: 100%;
+            border-right: 0;
+            background-color: white;
+            padding: 1rem 1rem;
+            
+        }
         strong{
-            padding: 1rem 0;
+            padding: 1rem 0 0;
             font-weight: 600;
         }
     }
@@ -20,20 +36,44 @@ section.woocommerce-customer-details{
 
             h2.woocommerce-column__title{
                 font-weight: 600;
-                font-size: 19px;
-                color: $main;
+                font-size: 18.5px;
             }
 
             address{
-                border: 1px solid #eaeaea;
+                border: 0px solid #eaeaea;
                 border-radius: 0;
                 padding: 1.5rem;
-                line-height: 1.7;
-                font-size: 15px;
-
+                line-height: 1.8;
+                font-size: 15.5px;
+                background-color: white;
                 border-radius: 3px;
+                color: #515151;
             }
 
+        }
+    }
+}
+
+
+body.woocommerce-order-received{
+
+    main{
+
+        ul.breadcrumbs-woocommerce{
+            justify-content: center;
+
+        }
+
+        .woocommerce-order{
+            padding: 2rem;
+            background-color: #fafafa;
+            max-width: 1050px;
+            margin: auto;
+            border-radius: 10px;
+
+            >p{
+                text-align: center;
+            }
         }
     }
 }

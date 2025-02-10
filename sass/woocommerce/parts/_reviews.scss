@@ -1,89 +1,120 @@
 //  Reviews 
-.woocommerce #reviews #comments  {
+.woocommerce #reviews {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    #comments  {
+        width: 47%;
+
+
+        @media (max-width: 900px){
+            width: 100%;
+            margin-bottom: 1rem;
+        }
     
-    h2{
-        font-size: 20px;
-        font-weight: 600;
-        margin: 1.5rem 0 2.3rem;
-        line-height: 1.55;
-
-        @media (max-width:550px){
-            font-size: 18px;
-        }
-    }
-
-
-    ol.commentlist{
-        padding: 0 0rem;
-
-        li{
-            border-bottom: 1px solid #ececec;
-
-            img.avatar{
-                height: 50px;
-                width: 50px;
-                border-radius: 100px;
-                border: 0;
-                background-color: transparent;
-                padding: 0;
-
+        h2{
+            font-size: 20px;
+            font-weight: 600;
+            margin: 1.5rem 0 2.3rem;
+            line-height: 1.55;
+        
+            @media (max-width:550px){
+                font-size: 18px;
             }
-
-            .comment-text{
-                margin: 0 0 0 60px;
-                border: 0;
-                padding-top: 0rem;
-
-                @media (max-width:550px){
-                    margin: 0 0 0 50px;
+        }
+        
+        
+        ol.commentlist{
+            padding: 0 0rem;
+        
+            li{
+                border-bottom: 1px solid #ececec;
+        
+                img.avatar{
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 100px;
+                    border: 0;
+                    background-color: transparent;
+                    padding: 0;
+        
                 }
-
-
-                .star-rating{
-                    
-                    color: $main;
-                    font-size: 15px;
-
+        
+                .comment-text{
+                    margin: 0 0 0 60px;
+                    border: 0;
+                    padding-top: 0rem;
+        
                     @media (max-width:550px){
-                        font-size: 14px;
+                        margin: 0 0 0 50px;
                     }
-                }
-
-                p.meta{
-
-                   
-
-                    .woocommerce-review__author{
-
-                        font-weight: 500;
+        
+        
+                    .star-rating{
+                        
+                        color: $main;
+                        color: #FFC107;
                         font-size: 15px;
-                        text-transform: capitalize;
-                        color: black;
+
+        
+                        @media (max-width:550px){
+                            font-size: 14px;
+                        }
                     }
-
-                    span{
-                        display: none;
+        
+                    p.meta{
+        
+                    
+        
+                        .woocommerce-review__author{
+        
+                            font-weight: 500;
+                            font-size: 15px;
+                            text-transform: capitalize;
+                            color: black;
+                        }
+        
+                        span{
+                            display: none;
+                        }
+        
+                        time{
+                            display: block;
+                        }
                     }
-
-                    time{
-                        display: block;
-                    }
-                }
-
-                .description{
-                    padding-right: 0rem;
-                    p{
-                        font-size: 14.5px;
-                        line-height: 1.99;
-
+        
+                    .description{
+                        padding-right: 0rem;
+                        p{
+                            font-size: 14.5px;
+                            line-height: 1.99;
+        
+                        }
                     }
                 }
             }
         }
+
     }
+
+    .clear{
+        display: none;
+    }
+
+    #review_form_wrapper{
+        width: 48%;
+        @media (max-width: 900px){
+            width: 100%;
+        }
+    }
+
 }
 
+
 .woocommerce #review_form #respond{
+
 
     #reply-title{
         padding: 1rem;
@@ -94,6 +125,7 @@
         font-weight: 400;
         margin-bottom: 2rem;
         line-height: 1.6;
+        display: none;
     }
 
 
@@ -119,6 +151,7 @@
             .stars{
                 margin-bottom: 0;
                 color: $main;
+                color: #FFC107;
 
                 span{
                     display: inline-block;

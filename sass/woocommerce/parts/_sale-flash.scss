@@ -1,22 +1,21 @@
 // On sale Flash
 
 .woocommerce span.onsale{
-    padding: 7px 10px ;
-    border-radius: 0px;
+    padding: 5px 8px ;
     font-weight: 500;
     min-height: auto;
     line-height: 1.5;
     margin: 0 !important;
     background-color: rgb(19, 19, 19);
-    background-color: transparent;
-    background-color: white;
-    font-size: 11.5px;
+    font-size: 10.5px;
     letter-spacing: .5px;
-    color: crimson;
+    color: white;
     text-transform: uppercase;
     top: 13px;
     left: 13px;
     right: auto;
+    border-radius: 0px;
+
 
     &:lang(ar){
         right: 13px;

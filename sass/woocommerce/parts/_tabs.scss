@@ -2,8 +2,10 @@
 .woocommerce-page div.product .woocommerce-tabs{
 
     width: 100%;
-    max-width: 1250px;
-    margin: auto auto 5rem;
+    max-width: 1290px;
+    margin: auto auto 3rem;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 2.3rem;
 
     @media (max-width:550px){
         width: 100%;
@@ -11,21 +13,22 @@
 
     ul.tabs{
         padding: 0; 
-         margin-bottom: 2.2rem;
+         margin-bottom: 2.5rem;
+
 
         &::before{
-            border-bottom: 2px solid #eaeaea;
-            border-bottom: 0;
+            border-bottom: 1px solid #eaeaea;
         }
 
         li{
             border: none;
             background-color: transparent ;
-            background-color: #f5f5f5;
-            margin-right: .6rem;
+            margin-right: 1.7rem;
+            margin-left: 0;
             border-radius: 0;
-            margin-bottom: .8rem;
             line-height: 1.6;
+            padding: 0;
+            opacity: 1;
 
             &:lang(ar){
                 margin-right: 0;
@@ -34,13 +37,21 @@
             
             a{
                 font-weight: 500;
-                padding: 1em .9em;
+                padding: 1em 0;
                 text-transform: uppercase;
-                font-size: 13px;
-                letter-spacing: 1.1px;
+                font-size: 12.9px;
+                letter-spacing: 1px;
+                text-align: initial;
+                opacity: .5;
+                color: #111;
 
                 @media (max-width:550px){
                     font-size: 12.3px;
+                }
+
+                &:hover{
+                    opacity: 1;
+                    color: #111;
                 }
                
             }
@@ -50,10 +61,11 @@
             }
 
             &.active{
-                border-bottom: 0;
-                background-color: $main;
-                background-color: #d6d6d6;
-                color: rgb(0, 0, 0);
+                border-bottom: 2px solid #111;
+                color: #111;
+                a{
+                    opacity: 1;
+                }
             }
         }
     }

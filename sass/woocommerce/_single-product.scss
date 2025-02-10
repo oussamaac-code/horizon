@@ -1,14 +1,16 @@
 body.woocommerce.single-product{
 
     .woocommerce-breadcrumb{
-        max-width: 1250px;
-        margin: 0rem auto 4rem;
+        max-width: 1290px;
+        margin: 0rem auto 0rem;
         position: relative;
-        padding: 1.9rem 0;
-        width: 87%;
+        padding: 2.9rem 0 .2rem;
+        width: 88.5%;
         line-height: 1.8;
-        font-size: 13.7px;
+        font-size: 15.8px;
         word-spacing: 2px;
+        color: #0d425e;
+        font-weight: 500;
 
         &:lang(ar){
             font-weight: 600;
@@ -20,43 +22,46 @@ body.woocommerce.single-product{
             text-align: center;
             margin-bottom: 1.5rem; 
         }
-        a{  
 
-            
+        a{  
+            color: #598aa4;
+            font-weight: 300;
+
             &:hover{
                 text-decoration: underline;
-                color: $main;
             }
         }
+
         &::before{
             content: "";
             position: absolute;
             height: 100%;
-            background-color: #F8F9F9;
+            background-color: #eef3f5;
             width: 100vw;
             left: 50%;
             transform: translateX(-50%);
             z-index: -1;
             top: 0;
+            display: none;
 
         }
     }
 
     .woocommerce-notices-wrapper{
-        max-width: 1250px;
+        max-width: 1290px;
         margin: 1rem auto;
-        width: 90%;
+        width: 88.5%;
     }
 
     div.product{
-        max-width: 1200px;
+        max-width: 1290px;
         margin: auto;
-        width: 90%;
+        width: 88.5%;
 
 
         div.summary{
 
-            width: 55%;
+            width: 49%;
             margin-bottom: 5rem;
 
             @media (max-width: 800px){
@@ -67,10 +72,13 @@ body.woocommerce.single-product{
             }
 
             h1.product_title{
-                font-weight: 600;
-                line-height: 1.67;
-                font-size: 30px;
+                font-weight: 700;
+                line-height: 1.5;
+                font-size: 35px;
                 margin-top: 0;
+                color: #0d425e;
+                margin-bottom: 1.5rem;
+                margin-top: 1.5rem;
 
                 &:lang(ar){
                     font-weight: 700;
@@ -81,15 +89,17 @@ body.woocommerce.single-product{
                 }
 
                 @media (max-width:550px){
-                    font-size: 25px;
+                    font-size: 30px;
+                    margin-top: 2rem;
                 }
             }
 
             .price{
-                color: black;
-                color: #169543;
-                margin: 1.5rem 0;
-                font-size: 18.5px;
+                color: #062637;
+                color: $main-darker;
+                margin: 1rem 0 .9rem;
+                font-size: 21px;
+                font-weight: 400;
 
                 &:lang(ar){
                    
@@ -99,7 +109,14 @@ body.woocommerce.single-product{
 
                 ins{
                     text-decoration: none;
-                    font-weight: 500;
+                    font-weight: 400;
+                }
+
+                del{
+                    color: #598aa4;
+                    opacity: 0.7;
+                    padding-right: 0.3em;
+                    font-weight: 300;
                 }
 
             }
@@ -116,9 +133,9 @@ body.woocommerce.single-product{
             .woocommerce-product-rating{
 
                 font-size: 15px;
-                margin: 2rem 0;
+                margin: 1rem 0;
                 .star-rating{
-                    color: $main;
+                    color: #ffc107;
                 }
 
                 a{
@@ -270,26 +287,45 @@ body.woocommerce.single-product{
 
                 .variations{
                     width: 100%;
-                    margin-bottom: .5rem;
+                    margin-bottom: 0rem;
 
                     tr{
+                        
                         &:has(td select#pa_taille),
                         &:has(td select#pa_couleur){
                            display: none;
                         }
+
+                        &:nth-child(even){
+                            background-color: transparent;
+                        }
+
+                        &:first-child{
+
+                            th{
+                                margin-top: 0;
+                            }
+                        }
+
+                        &:last-child{
+
+                            th, td{
+                                margin-bottom: 0;
+                            }
+                        }
+
                     }
 
                     th, td{
                         line-height: normal;
+                        padding: 5px 0;
                     }
 
                     th{
                         text-align: left;
                         font-weight: 500;
-                        width: 20%;
-                        vertical-align: middle;
-                    
-                      
+                        margin: 0rem 0 .7rem;
+                        color: #062637;
 
                         &:lang(ar){
                             text-align: right;
@@ -297,36 +333,58 @@ body.woocommerce.single-product{
                         }
 
                         label{
-                            font-size: 16px;
-                            font-weight: 500;
+                            font-size: 15px;
+                            font-weight: 600;
                             line-height: 1;
-                            width: 100%;
                             display: block;
-                            margin-bottom: 5px;
+                            margin-bottom: 0px;
+                            color: #0d425e;
+                            text-transform: capitalize;
+                            padding: 10px;
                         }
                     }
 
                     td{
-
                         position: relative;
+                        border: 0px solid #ddd;
+                        border-radius: 6px;
+                        display: inline-block;
+                        margin-bottom: 0rem;
                         width: 100%;
-                        border: 1px solid #ddd;
-                        border-radius: 5px;
 
                         .reset_variations{
-                           display: none !important;
-                        }
+                           color: crimson;
+                           transition: none;
 
+                           &::before{
+                                content: "\eb99";
+                                display: inline-block;
+                                font-family: remixicon !important;
+                                font-style: normal; 
+                                transition: transform .3s ease;
+                                transform: rotate(0deg);
+                           }
+                           &:hover{
+
+                                &::before{
+                                    transform: rotate(90deg);
+                                
+                                }
+                            }
+                        }
 
                         &::after{
                             content: "\ea4e";
                             display: inline-block;
                             font-family: remixicon !important;
                             font-style: normal; 
-                            padding-top: 14px;
+                            padding-top: 0px;
                             position: absolute;
                             right: 8px;
-                            top: 4px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            font-size: 18px;
+                            display: none;
                         }
 
                         &:lang(ar){
@@ -339,14 +397,16 @@ body.woocommerce.single-product{
 
                         select{
                             width: 100%;
-                            padding: 0 13px ;
+                            padding: 0 18px ;
                             height: 3rem;
                             border: none;
                             outline: none;
                             -moz-appearance: none; 
                             -webkit-appearance: none; 
                             appearance: none;
-                            background-color: transparent !important;
+                            color: #0d425e;
+                            font-size: 14.2px;
+                            background-color: #F5F9FB !important;
                         }
                     }
                     
@@ -354,7 +414,7 @@ body.woocommerce.single-product{
 
                 .horizon-bulk-taille-variations{
                     
-                    margin: 0rem 0 1.7rem;
+                    //margin: 0rem 0 1.7rem;
 
                     .label{
                         margin-bottom: 1rem;
@@ -406,7 +466,7 @@ body.woocommerce.single-product{
 
                 .horizon-bulk-couleur-variations{
                     
-                    margin: 0rem 0 1.7rem;
+                    //margin: 0rem 0 1.7rem;
 
                     .label{
                         display: block;
@@ -464,6 +524,7 @@ body.woocommerce.single-product{
 
                 .clear-attribute-producto{
                     margin-bottom: 1.3rem;
+                    display: none;
                     a{
                         visibility: visible;
                         transition: all .3s ease;
@@ -507,6 +568,7 @@ body.woocommerce.single-product{
                 button.button{
                     height: 3.2rem ;
                     background-color: $main;
+                    background-color: #ffc107;
                     font-family: $inter;
                     border-radius: 0;
                     transition: all .3s ease;
@@ -517,6 +579,7 @@ body.woocommerce.single-product{
                     letter-spacing: .2px;
                     text-transform: uppercase;
                     min-width: 70%;
+                    color: black !important;
 
                     @media (max-width:550px){
                         font-size: 13px;
@@ -542,6 +605,7 @@ body.woocommerce.single-product{
 
                     &:hover{
                         background-color: $main-darker;
+                        color: white !important;
                     }
                 }
 
@@ -619,7 +683,7 @@ body.woocommerce.single-product{
 
         div.images.woocommerce-product-gallery{
             
-            width: 40%;
+            width: 46.5%;
 
 
             @media (max-width: 800px){
@@ -641,9 +705,10 @@ body.woocommerce.single-product{
         >h2{
             font-size: 26px;
            
-            font-weight: 700;
+            font-weight: 600;
             text-align: center;
             margin-bottom: 3rem;
+            color: #0d425e;
 
             @media (max-width:550px){
                 font-weight: 700;

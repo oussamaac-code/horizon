@@ -80,6 +80,31 @@
                 ?>
             </div>
 
+            <!-- burger menu -->
+
+            <div class="burger-menu">
+                <a href=""> <i class="ri-menu-line"></i> </a>
+            </div>
+            <script>
+                jQuery(document).ready(function($){ 
+                    
+                    // Collapse ** Mobile menu **
+                    $('header#main-header .burger-menu').on("click", function(e) {
+                        e.preventDefault();
+                        this.classList.toggle("active");
+                        var content = $('header#main-header .mobile-menu');
+                    
+                        if (content.height()){
+                            content.css('max-height', '0' )
+                        }else{
+                        
+                            content.css('max-height', content.prop('scrollHeight') )
+                        }
+                    });
+
+                })
+            </script>
+
         </div>
 
 

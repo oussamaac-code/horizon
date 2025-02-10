@@ -5,9 +5,10 @@
     flex-wrap: wrap;
 
     li{
-        padding: 14px 14px;
+        padding: 14px 14px 0;
         padding-left: 0;
-        width: 25%;
+        width: 20%;
+        margin-bottom: 0rem;
 
 
         &:lang(ar){

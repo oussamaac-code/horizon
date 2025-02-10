@@ -53,27 +53,6 @@ function archive_product_page_sidebar() {
 add_action( 'wp', 'archive_product_page_sidebar' );
 
 
-
-
-// ****  Cart page  ****
-
-
-add_action('woocommerce_cart_is_empty', 'cart_page_heading_section', 0);
-add_action('woocommerce_before_cart', 'cart_page_heading_section', 0);
-
-
-function cart_page_heading_section(){
-    ;?>
-    <section class="heading-cart">
-        <?php echo get_the_post_thumbnail(); ?>
-        <div class="container">
-            <h1><?php the_title(); ?></h1>
-        </div>
-    </section>
-    <?php
-};
-
-
 //add_action('woocommerce_after_cart_item_name', 'add_price_to_product_name');
 
 add_action('woocommerce_after_cart_item_name', function( $cart_item, $cart_item_key){
@@ -105,16 +84,6 @@ function single_product_page_sidebar() {
     }
 } 
 add_action( 'wp', 'single_product_page_sidebar' );
-
-
-// ****  Product card   ****
-
-
-add_action('woocommerce_before_shop_loop_item_title' , function(){ echo '<div class="img">'; }, 9);
-add_action('woocommerce_shop_loop_item_title' , function(){ echo '</div>'; }, 9);
-
-
-remove_action( 'woocommerce_after_shop_loop_item_title' , 'woocommerce_template_loop_rating', 5 );
 
 
 // (WOOCOMMERCE) currency to DH
@@ -196,3 +165,4 @@ function custom_override_checkout_fields( $fields ) {
 
     return $fields;
 }
+

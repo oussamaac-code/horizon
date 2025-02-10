@@ -3,23 +3,41 @@
 .woocommerce-error, .woocommerce-info, .woocommerce-message{
     border-top: 0;
     background-color: #fafafa;
-    font-size: 14px;
+    font-size: 14.5px;
     margin-bottom: 0;
-    line-height: 1.75;
+    line-height: 1.8;
     margin-bottom: 2rem;
+    position: relative;
+    padding: .9em 1.5em .9em 3.5em;
+    padding-left: 2.5em;
+    outline: none;
 
     &::before{
         color: $main;
-        @media (max-width:550px) {
-            top: 17px;
-            
-        }
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 5px;
+        top: 0; left: 0;
+        background-color: $main-darker;
+        
     }
 }
 
 .woocommerce-message{
-    background-color: rgba(10, 228, 10, 0.256);
-    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    .button{
+        float: right;
+        order: 2;
+    }
+
+    &:before{
+        background-color: rgb(75, 214, 168);
+    }
     
 }
 
@@ -28,13 +46,17 @@
     li{
         margin-bottom: 9px;
         font-size: 14px;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
         strong{
             font-weight: 600;
         }
     }
 
     &::before{
-        color: crimson;
+        background-color: rgb(255, 75, 75);
     }
 }
 

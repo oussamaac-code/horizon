@@ -26,6 +26,28 @@ function my_ajax_handler_featured_product() {
 }
 
 /**
+ * Handles my AJAX Likes.
+ */
+
+ add_action( 'wp_ajax_my_post_likes', 'my_ajax_handler_post_likes' );
+ add_action( 'wp_ajax_nopriv_my_post_likes', 'my_ajax_handler_post_likes' );
+
+
+ function my_ajax_handler_post_likes() {
+	
+    check_ajax_referer( 'ajax_nonce' );
+
+    $update_likes= update_post_meta( $_POST['post_ID'], '_hr_box_likes', $_POST['hr_field_value']);
+
+    if( $update_likes ){
+
+        echo get_post_meta( $_POST['post_ID'], '_hr_box_likes' )[0];
+    }
+
+	wp_die();
+}
+
+/**
  * Handles AJAX update quantity cart
  */
 

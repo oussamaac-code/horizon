@@ -16,7 +16,18 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#F39F5A">
-    <title> <?php echo get_the_title() ;?> - Website Name</title>
+    <title> 
+        <?php 
+            if ( is_front_page() ){
+
+                echo get_the_title().' | '.get_bloginfo('name');
+
+            }else{
+
+                echo wp_title('').' | '.get_bloginfo('name');
+            }
+        ;?> 
+    </title>
 
     <?php wp_head() ;?>
 </head>
@@ -33,11 +44,15 @@
         <div class="logo"> 
 
             <a href="<?php echo get_home_url() ;?>">
-                <img src="<?php echo get_option('site_logo') ;?>" alt="logo">
+                <span class="dark">
+                    <?php echo  wp_get_attachment_image($logo_dark, 'medium') ;?> 
+                </span>
+                <span class="white">
+                    <?php echo  wp_get_attachment_image($logo_white, 'medium') ;?> 
+                </span>
             </a>
 
         </div>
-
 
         <!-- nav links -->
         <nav> 
@@ -54,13 +69,47 @@
         
         <!-- header end -->
         <div class="end"> 
+
+            <!-- languages -->
+            <div class="languages">
+
+                <?php 
+
+                if ( class_exists('TRP_Translate_Press') )
+                { 
+
+                $array_lang = trp_custom_language_switcher(); 
+                $current_language = get_locale(); 
+
+
+                if ( apply_filters( 'trp_allow_tp_to_run', true ) ){ ;?>
+
+                    <ul data-no-translation>
+                        <?php foreach ($array_lang as $name => $item){ 
+                            $b= $item['language_code']===$current_language ? 'class="current-language"': '' ;?>
+                            <li <?php echo $b; ?>  > 
+                                <a href="<?php echo $item['current_page_url']; ?>" > 
+                                    <span><?php echo $item['short_language_name']?></span>
+                                </a>
+                            </li>
+                        <?php } ?>
+                    </ul>
+
+                <?php } 
+
+                }
+                ;?>
+
+            </div>
             
+
             <!-- search -->
             <?php
                 if ( function_exists( '_depot_header_search_button' ) ) {
                     _depot_header_search_button();
                 }
             ?>
+
 
             <!-- login -->
             <?php
@@ -74,7 +123,7 @@
 
             <div class="mini-cart">
                 <?php
-                    if ( function_exists( 'horizon_woocommerce_header_cart' ) ) {
+                    if ( class_exists( 'woocommerce' ) && function_exists( 'horizon_woocommerce_header_cart' ) ) {
                         horizon_woocommerce_header_cart();
                     }
                 ?>

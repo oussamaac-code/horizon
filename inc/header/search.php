@@ -26,7 +26,7 @@
 
                 <div class="search-container close">
                     <div class="content">
-                        <h4>WHAT YOU ARE LOOKING FOR?</h4>
+                        <h4><?php _e('Enter your keyword here','textdomain'); ?></h4>
                         <div class="close"> <i class="ri-close-large-line"></i> </div>
                         <div class="search-form">
                             <?php get_search_form(); ?>
@@ -51,23 +51,29 @@
                             $('header#main-header .search .search-container').addClass('close')
                         })
 
-                        // **  Login Register froms  **
+                        // **  Search input Form  **
    
                         var searchForm= $('.search-container .search-form input');
 
-                        // Login form
                         searchForm.on('input', function() { 
 
-                            $.post(my_ajax_obj.ajax_url, {     
+                            if( $(this).val()=="" ){
+                                $('.search-container .search-result').html('')
+                            }else{
 
-                                _ajax_nonce: my_ajax_obj.nonce, 
-                                action: "my_search_result",         
-                                keyword: $(this).val()          
-                                }, function(data) {         
-                                    $('.search-container .search-result').html(data)
-                                }
+                                $.post(my_ajax_obj.ajax_url, {     
+    
+                                    _ajax_nonce: my_ajax_obj.nonce, 
+                                    action: "my_search_result",         
+                                    keyword: $(this).val()          
+                                    }, function(data) {         
+                                        $('.search-container .search-result').html(data)
+                                    }
+    
+                                );
 
-                            );
+                            }
+
 
                         });
 
@@ -80,7 +86,7 @@
 }
 
 /**
- * Handles my AJAX Login request.
+ * Handles my AJAX Search query.
  */
 
  add_action( 'wp_ajax_my_search_result', 'my_ajax_handler_search' );

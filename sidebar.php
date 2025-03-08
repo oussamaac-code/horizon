@@ -7,7 +7,7 @@
  * @package Horizon
  */
 
-if ( is_product() ||  is_shop() || is_product_category() || is_product_tag() || is_cart() || is_checkout() ): 
+if ( class_exists( 'woocommerce' ) && ( is_product() ||  is_shop() || is_product_category() || is_product_tag() || is_cart() || is_checkout() ) ): 
 
 	if ( is_active_sidebar( 'shop' ) ) : 
 		;?>

@@ -212,7 +212,6 @@ if ( ! function_exists( '_depot_login_form' ) ) {
                             
                                 e.preventDefault();
                                 loginForm.css('display', 'flex');
-                                console.log('hello')
                             })
                         }
 

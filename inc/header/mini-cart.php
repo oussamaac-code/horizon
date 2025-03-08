@@ -45,11 +45,11 @@ if ( ! function_exists( 'horizon_woocommerce_cart_link' ) ) {
 			<?php
 			$item_count_text = sprintf(
 				/* translators: number of items in the mini cart. */
-				_n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'horizon_' ),
+				_n( '%d', '%d', WC()->cart->get_cart_contents_count(), 'horizon_' ),
 				WC()->cart->get_cart_contents_count()
 			);
 			?>
-			<span class="amount"> <i class="ri-shopping-bag-4-line"></i> <?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></span> <span class="count"><?php echo esc_html( $item_count_text ); ?></span>
+			<span class="amount"> <i class="ri-shopping-cart-line"></i> <?php //echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></span> <span class="count"><?php echo esc_html( $item_count_text ); ?></span>
 		</a>
 		<?php
 	}
@@ -62,7 +62,7 @@ if ( ! function_exists( 'horizon_woocommerce_header_cart' ) ) {
 	 * @return void
 	 */
 	function horizon_woocommerce_header_cart() {
-		if ( is_cart() ) {
+		if ( class_exists( 'woocommerce' ) && is_cart() ) {
 			$class = 'current-menu-item';
 		} else {
 			$class = '';

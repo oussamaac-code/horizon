@@ -3,7 +3,7 @@
 
 function archive_product_page_sidebar() {
 
-    if ( !is_product() ){
+    if ( class_exists( 'woocommerce' ) && !is_product() ){
 
         add_action( 'woocommerce_before_main_content', function(){ ; ?>
 
@@ -79,7 +79,7 @@ add_action( 'woocommerce_checkout_after_order_review', function(){ echo '</div>'
 
 function single_product_page_sidebar() {
 
-    if ( is_product() ){
+    if ( class_exists( 'woocommerce' ) && is_product() ){
         remove_action( 'woocommerce_sidebar' , 'woocommerce_get_sidebar', 10 );
     }
 } 

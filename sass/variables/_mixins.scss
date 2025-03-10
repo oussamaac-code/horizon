@@ -11,3 +11,16 @@
     animation: siteLoaderOut .6s;
 
 }
+@mixin siteLoaderIn() {
+    @keyframes siteLoaderIn {
+        0% {
+            transform: translateY(-20px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+
+    animation: siteLoaderIn .6s .5s;
+
+}

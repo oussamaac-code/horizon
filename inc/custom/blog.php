@@ -89,3 +89,38 @@ function _s_customize_preview_js() {
 add_action( 'customize_controls_init', '_s_customize_preview_js' );
 
 
+// Mta boxes
+
+add_action( 'add_meta_boxes', 'giza_post_template_metabox' );
+add_action( 'save_post', 'save_giza_post_template_metabox' );
+
+
+function giza_post_template_metabox(){
+
+    // ==== META Boxes ====
+    add_meta_box('hrzn_post_template', 'Post Template', 'metabox_post_template_html', 'post');
+    
+}
+
+function save_giza_post_template_metabox( int $post_id){
+
+    if ( array_key_exists('hrzn_post_template', $_POST ) ) {
+        update_post_meta( $post_id, 'hrzn_post_template', $_POST['hrzn_post_template'] );
+    } 
+   
+}
+
+function metabox_post_template_html( $post ){
+
+    $value = get_post_meta( $post->ID, 'hrzn_post_template', true );
+    ?>
+    <select name="hrzn_post_template" id="hrzn_post_template" class="postbox">
+        <option value="template1" <?php selected( $value, 'template1' ); ?>>No Sidebar 1</option>
+        <option value="template2" <?php selected( $value, 'template2' ); ?>>No Sidebar 2</option>
+        <option value="template3" <?php selected( $value, 'template3' ); ?>>No Sidebar 3</option>
+        <option value="template4" <?php selected( $value, 'template4' ); ?>>Right Sidebar</option>
+        <option value="template5" <?php selected( $value, 'template5' ); ?>>Left Sidebar</option>
+    </select>
+    <?php
+    
+}

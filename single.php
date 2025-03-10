@@ -14,7 +14,7 @@ get_header();
 
     <?php
 
-    $template_post = get_field('Post_Template') ? get_field('Post_Template') : '';
+    $template_post = get_post_meta( get_the_ID() , 'hrzn_post_template', true );
 
     switch ($template_post) {
         case 'template1': ;?>

@@ -33,6 +33,25 @@
 </head>
 
 <body <?php body_class() ;?>>
+
+
+<?php 
+ 
+$sticky_navbar = get_theme_mod('horizon_header_sticky');
+$logo_white    = get_theme_mod('horizon_header_logo');
+$logo_dark     = get_theme_mod('horizon_header_logo_dark');
+$cta_text      = get_theme_mod('horizon_header_cta_text');
+$cta_link      = get_theme_mod('horizon_header_cta_link');
+
+$a= $sticky_navbar ==1 ? 'stick' : ''  ;
+
+if ( function_exists( '_depot_login_form' ) ) {
+    _depot_login_form();
+}
+
+get_template_part('templates/parts/site', 'loader');
+
+;?>
     
 
 
@@ -176,13 +195,3 @@
     </div>
 
 </header>
-
-
-<?php 
-
-get_template_part('templates/parts/site', 'loader');
-
-
-if ( function_exists( '_depot_login_form' ) ) {
-    _depot_login_form();
-}

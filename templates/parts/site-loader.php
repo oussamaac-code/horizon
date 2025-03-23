@@ -20,11 +20,17 @@ $logo_dark  = get_theme_mod('horizon_header_logo_dark');
         $('.site-loader').removeClass('loader-show')
 
         $(document).on("click", "a", function (e) {
-            e.preventDefault();
         
             var linkClicked = $(this).attr('href');
 
-            if ( linkClicked!='#' && linkClicked!=undefined && linkClicked!=""){
+            let pattern = /#.*/gm;
+            let result = linkClicked.match(pattern);
+
+            console.log('regex: '+result)
+
+            if ( result==null && linkClicked!='#' && linkClicked!=undefined && linkClicked!=""){
+                
+                e.preventDefault();
 
                 $('.site-loader').addClass('loader-show')
                 window.setTimeout(function () {
